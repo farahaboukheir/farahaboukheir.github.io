@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farah Abou Kheir | Academic Portfolio</title>
+    <!-- Google Fonts: Tajawal & Great Vibes (Cursive/Calligraphy) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #4a3e6d;
+            --accent-lavender: #8b78a5;
+            --light-bg: #faf9fc;
+            --card-bg: #ffffff;
+            --text-dark: #2d2838;
+            --text-muted: #625975;
+            --lavender-border: #e6e1f0;
+            --badge-bg: #f0ebf7;
+            --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--lavender-border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-purple);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Elegant Calligraphic Welcome Section */
+        .welcome-hero {
+            background: var(--hero-gradient);
+            padding: 80px 40px;
+            border-radius: 20px;
+            border: 1px solid var(--lavender-border);
+            box-shadow: 0 10px 30px rgba(74, 62, 109, 0.04);
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .script-welcome {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.8rem;
+            color: var(--accent-lavender);
+            margin: 0;
+            line-height: 1;
+            font-weight: normal;
+        }
+
+        .welcome-hero h1 {
+            color: var(--primary-purple);
+            margin: 15px 0 15px 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .welcome-subtitle {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+        }
+
+        /* Hero Quick Navigation Cards */
+        .hero-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn-card {
+            background-color: var(--card-bg);
+            padding: 22px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid var(--lavender-border);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(74, 62, 109, 0.02);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-lavender);
+            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.08);
+        }
+
+        .btn-card-title {
+            color: var(--primary-purple);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .btn-card-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            text-align: center;
+        }
+
+        /* Contact Badges */
+        .contact-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px dashed var(--lavender-border);
+        }
+
+        .contact-links a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            padding: 8px 18px;
+            background-color: var(--badge-bg);
+            border-radius: 6px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .contact-links a:hover {
+            background-color: var(--primary-purple);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Welcome Hero Section -->
+        <header class="welcome-hero">
+            <div class="script-welcome">Welcome to my Portfolio</div>
+            <h1>Farah Abou Kheir</h1>
+            <div class="welcome-subtitle">
+                Medical Student & Public Health Researcher dedicated to evidence-based healthcare, community education, and inclusive health interventions.
+            </div>
+
+            <!-- Navigation Cards -->
+            <div class="hero-nav-grid">
+                <a href="about.html" class="btn-card">
+                    <span class="btn-card-title">About Me →</span>
+                    <span class="btn-card-desc">Read my full intro and community vision</span>
+                </a>
+                <a href="research.html" class="btn-card">
+                    <span class="btn-card-title">Research →</span>
+                    <span class="btn-card-desc">Publications, ongoing studies, and manuscripts</span>
+                </a>
+                <a href="cv.html" class="btn-card">
+                    <span class="btn-card-title">Curriculum Vitae →</span>
+                    <span class="btn-card-desc">Academic record, qualifications, and skills</span>
+                </a>
+            </div>
+
+            <!-- Contact Links -->
+            <div class="contact-links">
+                <a href="mailto:farahak2002@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/farah-abou-kheir" target="_blank">LinkedIn</a>
+                <a href="https://orcid.org/0009-0006-2637-1370" target="_blank">ORCID</a>
+                <a href="tel:+963956551679">+963 956551679</a>
+            </div>
+        </header>
+
+        <footer>
+            © Farah Abou Kheir | Hosted on GitHub Pages
+        </footer>
+    </div>
+
+</body>
+</html>
