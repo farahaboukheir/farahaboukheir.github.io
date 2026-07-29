@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Identity | Farah Abou Kheir</title>
+    <!-- Google Fonts: Tajawal & Great Vibes -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -27,6 +28,7 @@
             padding: 0;
         }
 
+        /* Navigation Bar */
         nav {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--lavender-border);
@@ -143,6 +145,63 @@
             font-weight: 500;
         }
 
+        /* Timeline Section Styling */
+        .timeline {
+            position: relative;
+            padding-left: 25px;
+            margin-top: 25px;
+            border-left: 2px solid var(--lavender-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(4px);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -32px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-purple);
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 0 0 2px var(--accent-lavender);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-lavender);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.1rem;
+            color: var(--primary-purple);
+            font-weight: 700;
+        }
+
+        .timeline-content p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         /* Focus Areas Badges */
         .focus-tags {
             display: flex;
@@ -171,11 +230,21 @@
             .stats-grid {
                 grid-template-columns: 1fr;
             }
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
@@ -196,19 +265,21 @@
             <div class="page-title">My Identity</div>
             <h2 class="section-heading">About Me</h2>
             <div class="intro-text">
-                <p>I am Farah Abou Kheir, a medical graduate from Damascus University with a dedicated focus on health promotion, epidemiology, and evidence-based healthcare.</p>
+                <p>I am Farah Abou Kheir, a medical student at Damascus University with a strong interest in health promotion, public health, and evidence-based healthcare.</p>
                 
-                <p>Throughout my medical journey, I have been deeply interested in how structured health knowledge influences lives and how modern healthcare must move beyond treating illness toward prevention and population-level health outcomes. This drive encourages me to bridge the gap between rigorous research, clinical practice, and direct community engagement.</p>
+                <p>Throughout my medical journey, I have been interested in how health knowledge can influence people’s lives and how healthcare can move beyond treating illness towards prevention and better health outcomes. This interest has encouraged me to explore the role of education, research, and community engagement in improving health.</p>
                 
-                <p>My academic and research footprint spans pediatric health, digital health, epidemiological surveys, and disability-inclusive interventions. These experiences have reinforced my conviction that effective health policies require robust evidence tailored to community-specific needs.</p>
+                <p>I have been involved in research projects focusing on areas such as pediatric health, digital health, women’s health, and disability inclusion. These experiences helped me understand the importance of evidence in designing effective health interventions and addressing the needs of different communities.</p>
                 
-                <p>Beyond research, I am committed to capacity building and social leadership. I co-founded <strong>Roaya Initiative</strong>, designed to deliver adapted first-aid training for individuals with visual and hearing impairments, and founded <strong>MedRAN</strong> (Medical Research and Academic Network) to empower medical students with essential research methodologies.</p>
+                <p>My work also includes developing health education initiatives for diverse groups. I co-founded Roaya Team, which focuses on first-aid education for people with visual and hearing impairments, and founded MedRAN (Medical Research and Academic Network) to support medical students in building research skills and engaging with scientific knowledge.</p>
+                
+                <p>I believe that improving health starts with making reliable information accessible and creating opportunities for people to participate in their own health decisions. I hope to continue developing projects that connect medical knowledge with communities and contribute to more inclusive and preventive healthcare.</p>
             </div>
         </div>
 
-        <!-- Creative Figures / Key Milestones -->
+        <!-- Key Figures & Milestones -->
         <div class="section-card">
-            <h3 class="section-heading">Key Figures & Milestones</h3>
+            <h2 class="section-heading">Key Figures & Milestones</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">91%</div>
@@ -219,7 +290,7 @@
                     <div class="stat-label">Participants Trained in Inclusive First Aid (Roaya)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">1,000+</div>
+                    <div class="stat-number">1,024</div>
                     <div class="stat-label">Participants in Cross-Sectional Epidemiological Studies</div>
                 </div>
                 <div class="stat-card">
@@ -229,9 +300,62 @@
             </div>
         </div>
 
+        <!-- Academic Milestones & Timeline -->
+        <div class="section-card">
+            <h2 class="section-heading">Academic Milestones & Timeline</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Co-Founder & Director — MedRAN & SheResearch</h3>
+                        <p>Launched the Medical Research and Academic Network (MedRAN) to build research capacity among medical students, developing structured 7-session research methodology curricula.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Community Mobilizer — Caritas Syria</h3>
+                        <p>Facilitating social cohesion dialogue, youth development, and inclusive community health education initiatives across post-conflict settings.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Scientific Team Leader — Ro'ya Initiative</h3>
+                        <p>Co-founded Ro'ya to deliver accessible, inclusive first-aid education and custom training kits for individuals with visual and hearing impairments.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Lead Investigator — Smartphone Addiction Study</h3>
+                        <p>Led a national cross-sectional study (N = 1,024) evaluating smartphone addiction and its physical and neuropsychological outcomes among university students.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 – 2026</div>
+                    <div class="timeline-content">
+                        <h3>Faculty of Medicine — Damascus University</h3>
+                        <p>Pursuing M.D. degree with an overall cumulative average of 91% (Distinction), specializing in public health research and health promotion.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <!-- Core Focus Areas -->
         <div class="section-card">
-            <h3 class="section-heading">Core Academic & Clinical Focus</h3>
+            <h2 class="section-heading">Core Academic & Clinical Focus</h2>
             <div class="focus-tags">
                 <span class="tag">Public Health & Epidemiology</span>
                 <span class="tag">Evidence-Based Medicine</span>
@@ -248,4 +372,3 @@
 
 </body>
 </html>
-
