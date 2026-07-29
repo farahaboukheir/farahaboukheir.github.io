@@ -173,7 +173,7 @@
             top: -2px;
         }
 
-        /* Sub-initiatives Style (Wadad & Naseej) */
+        /* Sub-initiatives Style (Watad & Naseej) */
         .sub-initiative {
             background: var(--hero-gradient);
             border-left: 3px solid var(--accent-lavender);
@@ -194,10 +194,10 @@
             color: var(--text-muted);
         }
 
-        /* Photo Gallery Grid */
+        /* 2x2 Photo Gallery Grid */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin-top: 20px;
         }
@@ -221,6 +221,34 @@
             transform: scale(1.05);
         }
 
+        /* Post Link Buttons */
+        .post-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .post-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--badge-bg);
+            color: var(--primary-purple);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            border: 1px solid var(--lavender-border);
+            transition: all 0.2s ease;
+        }
+
+        .post-btn:hover {
+            background-color: var(--primary-purple);
+            color: #ffffff;
+        }
+
         footer {
             text-align: center;
             padding: 25px;
@@ -229,6 +257,9 @@
         }
 
         @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
             .nav-container {
                 flex-direction: column;
                 gap: 10px;
@@ -274,9 +305,9 @@
             <!-- 1. Ro'ya Initiative -->
             <div class="impact-card">
                 <span class="impact-role">Co-Founder & Scientific Team Leader</span>
-                <h3 class="impact-title">Ro'ya Initiative (مبادرة رؤيا) — Pioneer Inclusive First Aid</h3>
+                <h3 class="impact-title">Ro'ya Initiative — Pioneer Inclusive First Aid</h3>
                 <p class="impact-desc">
-                    <strong>The first medical team in Syria</strong> dedicated to providing specialized first-aid and emergency preparedness education for visually impaired, deaf, and mute individuals.
+                    The first medical team in Syria dedicated to providing specialized first-aid and emergency preparedness education for visually impaired, deaf, and hard-of-hearing individuals.
                 </p>
                 <ul class="impact-highlights">
                     <li>Designed customized, tactile, and sensory-adapted first aid educational kits for participants.</li>
@@ -284,15 +315,13 @@
                     <li>Promoted health equality and self-reliance in emergency situations among vulnerable populations.</li>
                 </ul>
 
-                <!-- Photo Gallery Section -->
-                <div style="margin-top: 15px;">
-                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Initiative Gallery:</strong>
-                    <div class="gallery-grid">
-                        <!-- استبدلي 'roya1.jpg', 'roya2.jpg' بمسارات الصور الخاصة بكِ -->
-                        <div class="gallery-item"><img src="roya1.jpg" alt="Ro'ya Training Session 1" onerror="this.src='https://via.placeholder.com/300x222?text=Ro%27ya+Initiative+1'"></div>
-                        <div class="gallery-item"><img src="roya2.jpg" alt="Ro'ya Training Session 2" onerror="this.src='https://via.placeholder.com/300x222?text=Ro%27ya+Initiative+2'"></div>
-                        <div class="gallery-item"><img src="roya3.jpg" alt="Ro'ya Training Session 3" onerror="this.src='https://via.placeholder.com/300x222?text=Ro%27ya+Initiative+3'"></div>
-                    </div>
+                <!-- 2x2 Photo Gallery -->
+                <strong style="color: var(--primary-purple); font-size: 0.95rem;">Initiative Gallery:</strong>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="roya1.jpg" alt="Ro'ya Training Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+1'"></div>
+                    <div class="gallery-item"><img src="roya2.jpg" alt="Ro'ya Training Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+2'"></div>
+                    <div class="gallery-item"><img src="roya3.jpg" alt="Ro'ya Training Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+3'"></div>
+                    <div class="gallery-item"><img src="roya4.jpg" alt="Ro'ya Training Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+4'"></div>
                 </div>
             </div>
 
@@ -301,19 +330,38 @@
                 <span class="impact-role">Community Mobilizer & Project Coordinator</span>
                 <h3 class="impact-title">Caritas Syria — Peacebuilding & Social Cohesion</h3>
                 <p class="impact-desc">
-                    Following years of conflict and during a critical period in Syria, organized community dialogue sessions to promote peacebuilding, social cohesion, and resilience. Coordinated two major initiatives supported by Swiss funding:
+                    Following years of conflict, organized community dialogue sessions to foster peacebuilding, social cohesion, and post-conflict resilience. Coordinated two major community-driven initiatives supported by Swiss funding:
                 </p>
 
-                <!-- Sub-initiative 1: Watad -->
                 <div class="sub-initiative">
-                    <h4>Watad Initiative (مبادرة وتد)</h4>
-                    <p>Rehabilitated the Cultural Center to serve as a safe space for adolescents across 4 specialized clubs: <strong>Health & Wellbeing Club, Environmental Club, Debating Club, and Physics Club</strong>.</p>
+                    <h4>Watad Initiative</h4>
+                    <p>Rehabilitated the Cultural Center into a safe community space for adolescents, establishing four specialized clubs: Health & Wellbeing Club, Environmental Club, Debating Club, and Physics Club.</p>
                 </div>
 
-                <!-- Sub-initiative 2: Naseej -->
                 <div class="sub-initiative">
-                    <h4>Naseej Initiative (مبادرة نسيج)</h4>
-                    <p>Designed social cohesion and peacebuilding sessions targeting the <strong>Educational Triangle: Children, Parents, and Teachers</strong> to foster a supportive and unified community network.</p>
+                    <h4>Naseej Initiative</h4>
+                    <p>Delivered social cohesion and peacebuilding modules targeting the Educational Triangle (Children, Parents, and Teachers) to build integrated community networks.</p>
+                </div>
+
+                <!-- Featured Cultural Center & Outreach Posts Links -->
+                <div style="margin-top: 20px;">
+                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Featured Health Outreach & Coverage Links:</strong>
+                    <div class="post-links">
+                        <a href="https://www.facebook.com/61563469413375/posts/122180484224448980/?app=fbl" target="_blank" class="post-btn">📌 Diabetes Awareness Session Post</a>
+                        <a href="https://www.facebook.com/100064574476372/posts/1378117444350725/?app=fbl" target="_blank" class="post-btn">📌 Community Health Workshop Post</a>
+                        <a href="https://dcrn-sy.com/?p=10209" target="_blank" class="post-btn">🌐 DCRN Network Article Coverage</a>
+                    </div>
+                </div>
+
+                <!-- 2x2 Photo Gallery -->
+                <div style="margin-top: 20px;">
+                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Caritas Initiative Gallery:</strong>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="caritas1.jpg" alt="Caritas Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+1'"></div>
+                        <div class="gallery-item"><img src="caritas2.jpg" alt="Caritas Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+2'"></div>
+                        <div class="gallery-item"><img src="caritas3.jpg" alt="Caritas Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+3'"></div>
+                        <div class="gallery-item"><img src="caritas4.jpg" alt="Caritas Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+4'"></div>
+                    </div>
                 </div>
             </div>
 
@@ -322,8 +370,17 @@
                 <span class="impact-role">Community Educator</span>
                 <h3 class="impact-title">Towards a Better Future</h3>
                 <p class="impact-desc">
-                    Organized local community workshops and dialogue sessions aimed at spreading civic culture, health literacy, and youth empowerment in local Syrian communities.
+                    Organized local workshops and interactive awareness sessions aimed at spreading civic culture, promoting public health literacy, and encouraging active youth leadership across local Syrian communities.
                 </p>
+
+                <!-- 2x2 Photo Gallery -->
+                <strong style="color: var(--primary-purple); font-size: 0.95rem;">Workshops Gallery:</strong>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="future1.jpg" alt="Future Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Future+1'"></div>
+                    <div class="gallery-item"><img src="future2.jpg" alt="Future Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Future+2'"></div>
+                    <div class="gallery-item"><img src="future3.jpg" alt="Future Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Future+3'"></div>
+                    <div class="gallery-item"><img src="future4.jpg" alt="Future Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Future+4'"></div>
+                </div>
             </div>
 
         </div>
