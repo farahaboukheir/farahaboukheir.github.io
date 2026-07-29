@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community & Impact | Farah Abou Kheir</title>
+    <!-- Google Fonts: Tajawal & Great Vibes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #4a3e6d;
+            --accent-lavender: #8b78a5;
+            --light-bg: #faf9fc;
+            --card-bg: #ffffff;
+            --text-dark: #2d2838;
+            --text-muted: #625975;
+            --lavender-border: #e6e1f0;
+            --badge-bg: #f0ebf7;
+            --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--lavender-border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-purple);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--lavender-border);
+            box-shadow: 0 10px 30px rgba(74, 62, 109, 0.03);
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            color: var(--accent-lavender);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .section-heading {
+            color: var(--primary-purple);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--badge-bg);
+            padding-bottom: 10px;
+        }
+
+        /* Impact Project Card Styling */
+        .impact-card {
+            background: #ffffff;
+            border: 1px solid var(--lavender-border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
+            border-color: var(--accent-lavender);
+        }
+
+        .impact-role {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-lavender);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .impact-title {
+            color: var(--primary-purple);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+
+        .impact-desc {
+            color: var(--text-dark);
+            font-size: 1.02rem;
+            margin-bottom: 15px;
+        }
+
+        .impact-highlights {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .impact-highlights li {
+            position: relative;
+            padding-left: 22px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .impact-highlights li::before {
+            content: "•";
+            color: var(--accent-lavender);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 5px;
+            top: -2px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 600px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">My Identity</a></li>
+                <li><a href="research.html">Scholarly Work</a></li>
+                <li><a href="community.html" class="active">Community & Impact</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Header Card -->
+        <div class="section-card">
+            <div class="page-title">Community & Impact</div>
+            <h2 class="section-heading">Inclusive Health & Leadership Initiatives</h2>
+            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">
+                Bridging academic medicine with grassroots action to empower underserved groups, build research capacity, and improve community health literacy.
+            </p>
+        </div>
+
+        <!-- Initiatives Showcase -->
+        <div class="section-card">
+            
+            <!-- 1. Ro'ya Initiative -->
+            <div class="impact-card">
+                <span class="impact-role">Co-Founder & Scientific Team Leader</span>
+                <h3 class="impact-title">Ro'ya Initiative — Inclusive First Aid Education</h3>
+                <p class="impact-desc">
+                    A pioneer health initiative dedicated to making lifesaving first-aid knowledge accessible to individuals with visual and hearing impairments.
+                </p>
+                <ul class="impact-highlights">
+                    <li>Designed customized, tactile, and sensory-adapted first aid educational kits for participants.</li>
+                    <li>Trained over 200 participants with disability-inclusive pedagogical methodologies.</li>
+                    <li>Promoted equal access to emergency preparedness and health education across local communities.</li>
+                </ul>
+            </div>
+
+            <!-- 2. MedRAN -->
+            <div class="impact-card">
+                <span class="impact-role">Founder & Director</span>
+                <h3 class="impact-title">MedRAN (Medical Research & Academic Network)</h3>
+                <p class="impact-desc">
+                    An academic mentorship and capacity-building network designed to guide medical students and early-career researchers through evidence-based research methodologies.
+                </p>
+                <ul class="impact-highlights">
+                    <li>Developed and led a comprehensive 7-session core research methodology curriculum.</li>
+                    <li>Mentored medical students in study design, data collection, statistical analysis, and manuscript preparation.</li>
+                    <li>Fostered a collaborative digital ecosystem for multi-center undergraduate epidemiological research.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Caritas Syria & Public Health Outreach -->
+            <div class="impact-card">
+                <span class="impact-role">Community Mobilizer & Educator</span>
+                <h3 class="impact-title">Social Cohesion & Public Health Advocacy</h3>
+                <p class="impact-desc">
+                    Active engagement in community dialogue, post-conflict social cohesion programs, and public health awareness lectures.
+                </p>
+                <ul class="impact-highlights">
+                    <li>Facilitated community mobilization and dialogue sessions within Caritas Syria's Social Cohesion program.</li>
+                    <li>Delivered targeted public health awareness presentations, including chronic disease and diabetes management sessions.</li>
+                    <li>Advocated for preventive medicine and health equity in underserved regions across Syria.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer>
+            © Farah Abou Kheir | Hosted on GitHub Pages
+        </footer>
+    </div>
+
+</body>
+</html>
+
