@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farah Abou Kheir | Academic Portfolio</title>
+    <title>Farah Abou Kheir | Academic World</title>
     <!-- Google Fonts: Tajawal & Great Vibes (Cursive/Calligraphy) -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -121,7 +121,7 @@
         /* Hero Quick Navigation Cards */
         .hero-nav-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 35px;
         }
@@ -178,6 +178,7 @@
             font-size: 0.92rem;
             font-weight: 500;
             transition: all 0.2s;
+            cursor: pointer;
         }
 
         .contact-links a:hover {
@@ -201,9 +202,10 @@
             <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="about.html">My Identity</a></li>
+                <li><a href="research.html">Scholarly Work</a></li>
+                <li><a href="community.html">Community & Impact</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
@@ -212,25 +214,29 @@
         
         <!-- Welcome Hero Section -->
         <header class="welcome-hero">
-            <div class="script-welcome">Welcome to my Portfolio</div>
+            <div class="script-welcome">Welcome to My World</div>
             <h1>Farah Abou Kheir</h1>
             <div class="welcome-subtitle">
                 Medical Student & Public Health Researcher dedicated to evidence-based healthcare, community education, and inclusive health interventions.
             </div>
 
-            <!-- Navigation Cards -->
+            <!-- Navigation Cards with Creative Naming -->
             <div class="hero-nav-grid">
                 <a href="about.html" class="btn-card">
-                    <span class="btn-card-title">About Me →</span>
-                    <span class="btn-card-desc">Read my full intro and community vision</span>
+                    <span class="btn-card-title">My Identity →</span>
+                    <span class="btn-card-desc">Background, medical journey, and milestones</span>
                 </a>
                 <a href="research.html" class="btn-card">
-                    <span class="btn-card-title">Research →</span>
-                    <span class="btn-card-desc">Publications, ongoing studies, and manuscripts</span>
+                    <span class="btn-card-title">Scholarly Work →</span>
+                    <span class="btn-card-desc">Publications, epidemiological research, and papers</span>
                 </a>
-                <a href="cv.html" class="btn-card">
-                    <span class="btn-card-title">Curriculum Vitae →</span>
-                    <span class="btn-card-desc">Academic record, qualifications, and skills</span>
+                <a href="community.html" class="btn-card">
+                    <span class="btn-card-title">Community & Impact →</span>
+                    <span class="btn-card-desc">Social initiatives, Roaya, and volunteer programs</span>
+                </a>
+                <a href="contact.html" class="btn-card">
+                    <span class="btn-card-title">Get in Touch →</span>
+                    <span class="btn-card-desc">Direct inquiry form and contact channels</span>
                 </a>
             </div>
 
@@ -239,7 +245,8 @@
                 <a href="mailto:farahak2002@gmail.com">Email</a>
                 <a href="https://linkedin.com/in/farah-abou-kheir" target="_blank">LinkedIn</a>
                 <a href="https://orcid.org/0009-0006-2637-1370" target="_blank">ORCID</a>
-                <a href="tel:+963956551679">+963 956551679</a>
+                <!-- زر رقم الهاتف المعنون بـ Mobile Phone والذي عند الضغط عليه يفتح زر اتصال بالرقم -->
+                <a href="javascript:void(0)" onclick="this.innerHTML='📞 Call: +963 956551679'; this.href='tel:+963956551679';">Mobile Phone</a>
             </div>
         </header>
 
