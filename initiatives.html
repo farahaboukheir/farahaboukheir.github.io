@@ -109,49 +109,30 @@
             padding-bottom: 10px;
         }
 
-        /* Initiative Cards */
-        .initiative-card {
-            background: var(--hero-gradient);
+        /* Original Card Style */
+        .initiative-box {
+            background: var(--card-bg);
             border: 1px solid var(--lavender-border);
             border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 25px;
+            padding: 28px;
+            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .initiative-box:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
+            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.05);
             border-color: var(--accent-lavender);
-        }
-
-        .initiative-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .initiative-title {
             color: var(--primary-purple);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin: 0;
+            margin: 0 0 12px 0;
         }
 
-        .role-badge {
-            background-color: var(--card-bg);
-            color: var(--primary-purple);
-            border: 1px solid var(--lavender-border);
-            font-size: 0.85rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-
-        .initiative-desc {
+        .initiative-text {
             color: var(--text-dark);
             font-size: 1rem;
             line-height: 1.8;
@@ -188,7 +169,6 @@
         @media (max-width: 600px) {
             .nav-container { flex-direction: column; gap: 10px; }
             .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
-            .initiative-header { flex-direction: column; align-items: flex-start; gap: 6px; }
             .footer-links { flex-direction: column; gap: 8px; }
         }
     </style>
@@ -211,7 +191,7 @@
 
     <div class="container">
 
-        <!-- Page Intro Header -->
+        <!-- Intro Section -->
         <div class="section-card">
             <div class="page-title">Grassroots Leadership</div>
             <h2 class="section-heading">Community & Impact</h2>
@@ -220,38 +200,29 @@
             </p>
         </div>
 
-        <!-- Initiatives List -->
+        <!-- Community Initiatives Section -->
         <div class="section-card">
 
             <!-- Ro'ya -->
-            <div class="initiative-card">
-                <div class="initiative-header">
-                    <h3 class="initiative-title">Ro'ya</h3>
-                    <span class="role-badge">Scientific Team Leader</span>
-                </div>
-                <p class="initiative-desc">
+            <div class="initiative-box">
+                <h3 class="initiative-title">Ro'ya</h3>
+                <p class="initiative-text">
                     As Scientific Team Leader, I develop health education materials adapted for individuals with visual and hearing impairments — first-aid principles translated into formats that don't assume a learner can see a diagram or hear an instruction. The team has trained over 200 participants. This role taught me that "accessible" isn't a simplified version of standard content; it's a redesign built around a different starting point entirely.
                 </p>
             </div>
 
             <!-- Naseej (Caritas Syria) -->
-            <div class="initiative-card">
-                <div class="initiative-header">
-                    <h3 class="initiative-title">Naseej (Caritas Syria)</h3>
-                    <span class="role-badge">Coordinator</span>
-                </div>
-                <p class="initiative-desc">
+            <div class="initiative-box">
+                <h3 class="initiative-title">Naseej (Caritas Syria)</h3>
+                <p class="initiative-text">
                     I coordinate health education activities within Naseej, a social cohesion initiative bringing together parents, teachers, and children in post-conflict communities. The goal isn't just health knowledge transfer — it's rebuilding the trust and routine that make people receptive to that knowledge in the first place.
                 </p>
             </div>
 
             <!-- Watad (Caritas Syria) -->
-            <div class="initiative-card">
-                <div class="initiative-header">
-                    <h3 class="initiative-title">Watad (Caritas Syria)</h3>
-                    <span class="role-badge">Lead Designer & Supervisor</span>
-                </div>
-                <p class="initiative-desc">
+            <div class="initiative-box">
+                <h3 class="initiative-title">Watad (Caritas Syria)</h3>
+                <p class="initiative-text">
                     Through Watad, I design and supervise adolescent health education programs. Adolescents are an age group public health strategy often skips past — too old for pediatric programming, too young to be reached through adult channels — and this initiative exists to close that gap.
                 </p>
             </div>
