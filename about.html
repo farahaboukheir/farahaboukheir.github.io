@@ -28,7 +28,6 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--lavender-border);
@@ -110,149 +109,168 @@
             padding-bottom: 10px;
         }
 
-        .intro-text p {
-            font-size: 1.05rem;
+        .about-text p {
             color: var(--text-dark);
+            font-size: 1.05rem;
             margin-bottom: 18px;
+            line-height: 1.8;
         }
 
-        /* Creative Figures Grid */
-        .stats-grid {
+        /* Key Figures & Milestones Cards */
+        .metrics-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
-        .stat-card {
+        .metric-card {
             background: var(--hero-gradient);
             border: 1px solid var(--lavender-border);
-            border-radius: 14px;
-            padding: 22px;
+            border-radius: 16px;
+            padding: 25px;
             text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .stat-number {
-            font-size: 1.8rem;
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
+        }
+
+        .metric-number {
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--primary-purple);
-            margin-bottom: 4px;
+            line-height: 1.2;
+            margin-bottom: 6px;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
+        .metric-label {
             color: var(--text-muted);
+            font-size: 0.92rem;
             font-weight: 500;
         }
 
-        /* Timeline Section Styling */
+        /* Timeline Styles */
         .timeline {
             position: relative;
-            padding-left: 25px;
-            margin-top: 25px;
-            border-left: 2px solid var(--lavender-border);
+            padding-left: 20px;
+            border-left: 2px solid var(--badge-bg);
+            margin-top: 20px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
-            transition: transform 0.2s ease;
+            margin-bottom: 25px;
+            padding-left: 15px;
         }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(4px);
-        }
-
-        .timeline-dot {
+        .timeline-item::before {
+            content: '';
             position: absolute;
-            left: -32px;
-            top: 4px;
+            left: -27px;
+            top: 6px;
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: var(--primary-purple);
-            border: 3px solid var(--card-bg);
-            box-shadow: 0 0 0 2px var(--accent-lavender);
+            background-color: var(--accent-lavender);
+            border: 2px solid var(--card-bg);
+        }
+
+        .timeline-title {
+            color: var(--primary-purple);
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
         .timeline-date {
+            color: var(--accent-lavender);
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--accent-lavender);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
         }
 
-        .timeline-content h3 {
-            margin: 0 0 6px 0;
-            font-size: 1.1rem;
-            color: var(--primary-purple);
-            font-weight: 700;
-        }
-
-        .timeline-content p {
-            margin: 0;
+        .timeline-desc {
             color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.6;
+            margin: 0;
         }
 
-        /* Focus Areas Badges */
-        .focus-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+        /* Core Focus Grid */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
         }
 
-        .tag {
-            background-color: var(--badge-bg);
+        .focus-box {
+            background: var(--hero-gradient);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--lavender-border);
+        }
+
+        .focus-title {
             color: var(--primary-purple);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .focus-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin: 0;
         }
 
         footer {
+            border-top: 1px solid var(--lavender-border);
+            margin-top: 50px;
+            padding: 30px 20px;
             text-align: center;
-            padding: 25px;
             color: var(--text-muted);
-            font-size: 0.88rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-lavender);
         }
 
         @media (max-width: 600px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .metrics-grid, .focus-grid { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .footer-links { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">My Identity</a></li>
+                <li><a href="education.html">Medical Education</a></li>
                 <li><a href="research.html">Scholarly Work</a></li>
-                <li><a href="community.html">Community & Impact</a></li>
+                <li><a href="initiatives.html">Community & Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
@@ -260,113 +278,120 @@
 
     <div class="container">
         
-        <!-- Intro Card -->
+        <!-- Bio Section -->
         <div class="section-card">
-            <div class="page-title">My Identity</div>
+            <div class="page-title">Personal Story</div>
             <h2 class="section-heading">About Me</h2>
-            <div class="intro-text">
-                <p>I am Farah Abou Kheir, a medical student at Damascus University with a strong interest in health promotion, public health, and evidence-based healthcare.</p>
-                
-                <p>Throughout my medical journey, I have been interested in how health knowledge can influence people’s lives and how healthcare can move beyond treating illness towards prevention and better health outcomes. This interest has encouraged me to explore the role of education, research, and community engagement in improving health.</p>
-                
-                <p>I have been involved in research projects focusing on areas such as pediatric health, digital health, women’s health, and disability inclusion. These experiences helped me understand the importance of evidence in designing effective health interventions and addressing the needs of different communities.</p>
-                
-                <p>My work also includes developing health education initiatives for diverse groups. I co-founded Roaya Team, which focuses on first-aid education for people with visual and hearing impairments, and founded MedRAN (Medical Research and Academic Network) to support medical students in building research skills and engaging with scientific knowledge.</p>
-                
-                <p>I believe that improving health starts with making reliable information accessible and creating opportunities for people to participate in their own health decisions. I hope to continue developing projects that connect medical knowledge with communities and contribute to more inclusive and preventive healthcare.</p>
+            <div class="about-text">
+                <p>
+                    Health, I learned early, is never just clinical. Growing up in Syria, I watched illness follow the lines of poverty, displacement, and exclusion — and I noticed that the people most affected by a health problem were often the last to have accurate information about it.
+                </p>
+                <p>
+                    That observation has followed me through every project I've taken on since. Whether I'm studying why university students can't put down their phones, adapting first-aid materials for someone who's never seen a diagram, or coordinating a health session for parents and teachers trying to rebuild a sense of normalcy — I keep coming back to the same question: what do people actually know about their health, and what's stopping that knowledge from reaching them?
+                </p>
+                <p>
+                    I'm a medical student at Damascus University, but most of what shaped how I think about medicine happened outside the lecture hall, in research I pursued on my own initiative, in community rooms with Caritas, and in first-aid sessions with participants who taught me more about accessibility than any textbook did. I also spend a good part of my time trying to make sure other students don't have to learn research methodology the hard, self-taught way I did — which is why I built MedRAN.
+                </p>
+                <p>
+                    I'm currently applying to graduate programs in public health and medical education, hoping to turn years of hands-on, self-directed work into the kind of rigorous training that lets me do it at scale.
+                </p>
             </div>
         </div>
 
         <!-- Key Figures & Milestones -->
         <div class="section-card">
+            <div class="page-title">Impact & Numbers</div>
             <h2 class="section-heading">Key Figures & Milestones</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">91%</div>
-                    <div class="stat-label">Graduation Distinction Average (Damascus University)</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">91%</div>
+                    <div class="metric-label">Graduation Distinction Average (Damascus University)</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Participants Trained in Inclusive First Aid (Roaya)</div>
+                <div class="metric-card">
+                    <div class="metric-number">200+</div>
+                    <div class="metric-label">Participants Trained in Inclusive Health Education (Ro'ya)</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">1,024</div>
-                    <div class="stat-label">Participants in Cross-Sectional Epidemiological Studies</div>
+                <div class="metric-card">
+                    <div class="metric-number">2</div>
+                    <div class="metric-label">Published Papers</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">IJSC</div>
-                    <div class="stat-label">Published Clinical Case Report Lead Author</div>
+                <div class="metric-card">
+                    <div class="metric-number">4</div>
+                    <div class="metric-label">Community Initiatives Founder</div>
+                </div>
+                <div class="metric-card" style="grid-column: span 2;">
+                    <div class="metric-number">26</div>
+                    <div class="metric-label">Researchers Trained Through MedRAN / SheResearch</div>
                 </div>
             </div>
         </div>
 
         <!-- Academic Milestones & Timeline -->
         <div class="section-card">
+            <div class="page-title">Journey</div>
             <h2 class="section-heading">Academic Milestones & Timeline</h2>
             <div class="timeline">
-                
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2026 – Present</div>
-                    <div class="timeline-content">
-                        <h3>Co-Founder & Director — MedRAN & SheResearch</h3>
-                        <p>Launched the Medical Research and Academic Network (MedRAN) to build research capacity among medical students, developing structured 7-session research methodology curricula.</p>
-                    </div>
+                    <div class="timeline-title">MedRAN & SheResearch Initiatives</div>
+                    <div class="timeline-date">2023 - Present</div>
+                    <p class="timeline-desc">Founded academic mentorship networks empowering medical students and female researchers in peer-reviewed research and writing.</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2026 – Present</div>
-                    <div class="timeline-content">
-                        <h3>Community Mobilizer — Caritas Syria</h3>
-                        <p>Facilitating social cohesion dialogue, youth development, and inclusive community health education initiatives across post-conflict settings.</p>
-                    </div>
+                    <div class="timeline-title">Caritas Syria — Community Health Education</div>
+                    <div class="timeline-date">2022 - Present</div>
+                    <p class="timeline-desc">Coordinated health literacy and health education sessions for vulnerable, displaced, and underserved communities.</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 – Present</div>
-                    <div class="timeline-content">
-                        <h3>Scientific Team Leader — Ro'ya Initiative</h3>
-                        <p>Co-founded Ro'ya to deliver accessible, inclusive first-aid education and custom training kits for individuals with visual and hearing impairments.</p>
-                    </div>
+                    <div class="timeline-title">Ro'ya Initiative — Inclusive First-Aid Training</div>
+                    <div class="timeline-date">2022 - 2023</div>
+                    <p class="timeline-desc">Designed adapted, accessible first-aid and community emergency response packages for individuals with sensory impairments.</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h3>Lead Investigator — Smartphone Addiction Study</h3>
-                        <p>Led a national cross-sectional study (N = 1,024) evaluating smartphone addiction and its physical and neuropsychological outcomes among university students.</p>
-                    </div>
+                    <div class="timeline-title">Epidemiological Research — Smartphone Addiction Study</div>
+                    <div class="timeline-date">2023</div>
+                    <p class="timeline-desc">Led data collection and analysis on cross-sectional behavioral patterns and health outcomes among Syrian university students.</p>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 – 2026</div>
-                    <div class="timeline-content">
-                        <h3>Faculty of Medicine — Damascus University</h3>
-                        <p>Pursuing M.D. degree with an overall cumulative average of 91% (Distinction), specializing in public health research and health promotion.</p>
-                    </div>
+                    <div class="timeline-title">Faculty of Medicine — Damascus University</div>
+                    <div class="timeline-date">2018 - Present</div>
+                    <p class="timeline-desc">Medical student completing clinical clerkships with a consistent high-distinction academic average.</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- Core Focus Areas -->
+        <!-- Core Academic & Clinical Focus -->
         <div class="section-card">
+            <div class="page-title">Expertise</div>
             <h2 class="section-heading">Core Academic & Clinical Focus</h2>
-            <div class="focus-tags">
-                <span class="tag">Public Health & Epidemiology</span>
-                <span class="tag">Evidence-Based Medicine</span>
-                <span class="tag">Inclusive Health Interventions</span>
-                <span class="tag">Pediatric Clinical Research</span>
-                <span class="tag">Health Literacy & Education</span>
+            <div class="focus-grid">
+                <div class="focus-box">
+                    <div class="focus-title">Public Health & Epidemiology</div>
+                    <p class="focus-desc">Designing observational health studies and evaluating community health metrics in post-conflict settings.</p>
+                </div>
+                <div class="focus-box">
+                    <div class="focus-title">Evidence-Based Medicine</div>
+                    <p class="focus-desc">Translating clinical guidelines and research methodology into practical student-led learning toolkits.</p>
+                </div>
+                <div class="focus-box">
+                    <div class="focus-title">Inclusive Health Interventions</div>
+                    <p class="focus-desc">Developing accessible health promotion materials for marginalized groups and individuals with disabilities.</p>
+                </div>
+                <div class="focus-box">
+                    <div class="focus-title">Health Literacy & Education</div>
+                    <p class="focus-desc">Fostering clear, empathetic communication to bridge health gaps among vulnerable populations.</p>
+                </div>
             </div>
         </div>
 
         <footer>
-            © Farah Abou Kheir | Hosted on GitHub Pages
+            <div class="footer-links">
+                <a href="mailto:farah.aboukheir.med@gmail.com" target="_blank">Email</a>
+                <span>•</span>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <span>•</span>
+                <a href="https://orcid.org" target="_blank">ORCID</a>
+            </div>
+            <div>© Farah Abou Kheir | Hosted on GitHub Pages</div>
         </footer>
     </div>
 
