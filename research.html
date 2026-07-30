@@ -17,14 +17,6 @@
             --lavender-border: #e6e1f0;
             --badge-bg: #f0ebf7;
             --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
-            
-            /* Status Badges Colors */
-            --status-published: #2e7d32;
-            --status-published-bg: #e8f5e9;
-            --status-review: #ed6c02;
-            --status-review-bg: #fff4e5;
-            --status-ongoing: #0288d1;
-            --status-ongoing-bg: #e1f5fe;
         }
 
         body {
@@ -36,7 +28,6 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--lavender-border);
@@ -118,23 +109,31 @@
             padding-bottom: 10px;
         }
 
-        /* Research Item Card */
+        .sub-heading {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Research Item Cards */
         .research-card {
-            background: #ffffff;
+            background: var(--card-bg);
             border: 1px solid var(--lavender-border);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 24px;
             margin-bottom: 20px;
             transition: all 0.3s ease;
         }
 
         .research-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.05);
             border-color: var(--accent-lavender);
         }
 
-        .research-header {
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -144,210 +143,252 @@
 
         .research-title {
             color: var(--primary-purple);
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             margin: 0;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
-        /* Status Tags */
-        .status-tag {
+        .status-badge {
+            background-color: var(--badge-bg);
+            color: var(--primary-purple);
             font-size: 0.8rem;
             font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 12px;
             white-space: nowrap;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .status-published {
-            background-color: var(--status-published-bg);
-            color: var(--status-published);
-        }
-
-        .status-review {
-            background-color: var(--status-review-bg);
-            color: var(--status-review);
-        }
-
-        .status-ongoing {
-            background-color: var(--status-ongoing-bg);
-            color: var(--status-ongoing);
-        }
-
-        .journal-name {
+        .journal-tag {
             color: var(--accent-lavender);
             font-weight: 700;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .authors-tag {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-style: italic;
+            margin-bottom: 8px;
         }
 
         .research-desc {
-            color: var(--text-muted);
+            color: var(--text-dark);
             font-size: 0.95rem;
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .research-desc ul {
-            margin: 8px 0 0 0;
-            padding-left: 20px;
-        }
-
-        .research-desc li {
-            margin-bottom: 6px;
+        /* Feature Box for Capacity Building */
+        .capacity-box {
+            background: var(--hero-gradient);
+            border: 1px solid var(--lavender-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 15px;
         }
 
         footer {
+            border-top: 1px solid var(--lavender-border);
+            margin-top: 50px;
+            padding: 30px 20px;
             text-align: center;
-            padding: 25px;
             color: var(--text-muted);
-            font-size: 0.88rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-lavender);
         }
 
         @media (max-width: 600px) {
-            .research-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .card-header { flex-direction: column; gap: 8px; }
+            .footer-links { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">My Identity</a></li>
+                <li><a href="education.html">Medical Education</a></li>
                 <li><a href="research.html" class="active">Scholarly Work</a></li>
-                <li><a href="community.html">Community & Impact</a></li>
+                <li><a href="initiatives.html">Community & Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="container">
-        
-        <!-- Header Section -->
+
+        <!-- Intro Section -->
         <div class="section-card">
-            <div class="page-title">Scholarly Work</div>
-            <h2 class="section-heading">Research Portfolio</h2>
-            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">
-                My research focuses on public health, cardiovascular epidemiology, mental health, and health disparities in conflict and resource-limited settings.
+            <div class="page-title">Research & Publications</div>
+            <h2 class="section-heading">Scholarly Work</h2>
+            <p style="color: var(--text-dark); font-size: 1.05rem; margin: 0; line-height: 1.8;">
+                My research investigates health literacy, what people know about their health and why that knowledge often fails to reach them, across contexts ranging from cardiovascular disease to mental health to disability inclusion in Syria.
             </p>
         </div>
 
-        <!-- 1. Published Peer-Reviewed Research -->
+        <!-- Main Research Portfolio -->
         <div class="section-card">
-            <h2 class="section-heading">Published Articles</h2>
+
+            <!-- Earliest Work Section -->
+            <h3 class="sub-heading" style="margin-top: 0;">Foundational Research</h3>
             
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Investigating the Impact of Syrian Conflict on Women's Education, Mental Health, and Rights</h3>
-                    <span class="status-tag status-published">Published</span>
+                <div class="card-header">
+                    <h4 class="research-title">Smartphone Addiction Among University Students (N=1,024)</h4>
+                    <span class="status-badge">Cross-Sectional Study</span>
                 </div>
-                <span class="journal-name">BMC Women's Health</span>
                 <p class="research-desc">
-                    A cross-sectional study linking conflict-driven educational disruption to adverse mental health outcomes among Syrian women.
+                    Examined how unregulated digital health information shapes behavior among university students. This was my first attempt to measure a health literacy gap directly, rather than just observe one.
                 </p>
             </div>
-        </div>
 
-        <!-- 2. Manuscripts Under Review -->
-        <div class="section-card">
-            <h2 class="section-heading">Manuscripts Under Review</h2>
+            <!-- Published Articles -->
+            <h3 class="sub-heading">Published Articles</h3>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Knowledge, Attitudes, and Willingness to Perform Cardiopulmonary Resuscitation in Syria</h3>
-                    <span class="status-tag status-review">Under Review</span>
+                <div class="card-header">
+                    <h4 class="research-title">Investigating the Impact of Syrian Conflict on Women's Education, Mental Health, and Rights</h4>
+                    <span class="status-badge">Published</span>
                 </div>
-                <span class="journal-name">BMC Cardiovascular Disorders</span>
+                <div class="journal-tag">BMC Women's Health</div>
                 <p class="research-desc">
-                    A cross-sectional study (1,050 participants) identifying critical gaps in bystander CPR readiness and sudden cardiac arrest recognition in Syria.
+                    Linked conflict-driven educational disruption to mental health outcomes among Syrian women. It was the first time my research explicitly connected structural exclusion to health literacy, a link I've built on ever since.
                 </p>
             </div>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Public Awareness of Cardiovascular Disease and Its Risk Factors in Syria</h3>
-                    <span class="status-tag status-review">Under Review</span>
+                <div class="card-header">
+                    <h4 class="research-title">Duct-related complications of pediatric posttraumatic pancreatitis: A case report from Syria</h4>
+                    <span class="status-badge">Published</span>
                 </div>
-                <span class="journal-name">BMC Public Health</span>
+                <div class="journal-tag">Int J Surg Case Rep. 2025 Feb;127:110885</div>
+                <div class="authors-tag">Kheir FA, Moustafa L, Ahmad L, Kamil H, Mahmod J, Sandouk F.</div>
                 <p class="research-desc">
-                    Evaluating population-level CVD awareness and its sociodemographic predictors to inform community-based prevention strategies.
+                    Lead-author case report from my graduation project, examining a rare pediatric surgical complication.
+                </p>
+            </div>
+
+            <!-- Manuscripts Under Review -->
+            <h3 class="sub-heading">Manuscripts Under Review</h3>
+
+            <div class="research-card">
+                <div class="card-header">
+                    <h4 class="research-title">Knowledge, Attitudes, and Willingness to Perform Cardiopulmonary Resuscitation in Syria</h4>
+                    <span class="status-badge">Under Review</span>
+                </div>
+                <div class="journal-tag">BMC Cardiovascular Disorders</div>
+                <p class="research-desc">
+                    Identified critical gaps in bystander CPR readiness in Syria. It confirmed something I'd suspected from community sessions: life-saving knowledge often exists in principle but doesn't reach the people who'll need to use it under pressure.
                 </p>
             </div>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Quality of Life, Anxiety, and Depression Across Generations in Syria</h3>
-                    <span class="status-tag status-review">Under Review</span>
+                <div class="card-header">
+                    <h4 class="research-title">Public Awareness of Cardiovascular Disease and Its Risk Factors in Syria</h4>
+                    <span class="status-badge">Under Review</span>
                 </div>
-                <span class="journal-name">BMC Public Health</span>
+                <div class="journal-tag">BMC Public Health</div>
                 <p class="research-desc">
-                    A nationwide cross-sectional study comparing quality of life domains and mental health outcomes across three generational cohorts.
+                    Evaluated population-level cardiovascular knowledge and its social predictors. This project shaped how I now think about health promotion — not as one-size-fits-all messaging, but as something that has to be designed around who's being left out.
                 </p>
             </div>
-        </div>
-
-        <!-- 3. Ongoing Research Projects -->
-        <div class="section-card">
-            <h2 class="section-heading">Ongoing Research & Cohort Studies</h2>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">The Impact of Armed Conflict on Atrial Fibrillation Outcomes: Evidence from Two LMICs</h3>
-                    <span class="status-tag status-ongoing">Ongoing</span>
+                <div class="card-header">
+                    <h4 class="research-title">Quality of Life, Anxiety, and Depression Across Generations in Syria</h4>
+                    <span class="status-badge">Under Review</span>
                 </div>
-                <span class="journal-name">Multicenter Cohort Study</span>
+                <div class="journal-tag">BMC Public Health</div>
+                <p class="research-desc">
+                    Examined how mental health literacy and quality of life outcomes shift across three generational cohorts shaped by different phases of conflict.
+                </p>
+            </div>
+
+            <!-- Ongoing Research & Cohort Studies -->
+            <h3 class="sub-heading">Ongoing Research & Cohort Studies</h3>
+
+            <div class="research-card">
+                <div class="card-header">
+                    <h4 class="research-title">The Impact of Armed Conflict on Atrial Fibrillation Outcomes: Evidence from Two LMICs</h4>
+                    <span class="status-badge">Ongoing</span>
+                </div>
                 <p class="research-desc">
                     Examining how conflict-driven health system fragility affects patient management and outcomes in low- and middle-income countries.
                 </p>
             </div>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Are E-Cigarettes the New Gateway to Tobacco in Syrian Youth? A Cross-Sectional Study in Health Colleges at Damascus University</h3>
-                    <span class="status-tag status-ongoing">Ongoing</span>
+                <div class="card-header">
+                    <h4 class="research-title">Are E-Cigarettes the New Gateway to Tobacco in Syrian Youth?</h4>
+                    <span class="status-badge">Ongoing</span>
                 </div>
-                <span class="journal-name">Damascus University Health Colleges</span>
                 <p class="research-desc">
-                    A KAP study examining e-cigarette prevalence, knowledge, and attitudes among medical, dental, and pharmacy students, exploring the gateway hypothesis to conventional tobacco use.
+                    Investigates a knowledge gap forming in real time among health college students themselves — a reminder that health literacy gaps exist even among future providers.
                 </p>
             </div>
 
             <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Public Attitudes Toward Smoke-Free Policies in Syria</h3>
-                    <span class="status-tag status-ongoing">Ongoing</span>
+                <div class="card-header">
+                    <h4 class="research-title">Public Attitudes Toward Smoke-Free Policies in Syria</h4>
+                    <span class="status-badge">Ongoing</span>
                 </div>
-                <span class="journal-name">Community Health Initiative</span>
                 <p class="research-desc">
-                    A cross-sectional survey examining community perceptions and policy acceptance of smoke-free legislation among the general Syrian population.
+                    Measures how well public health information translates into public support for policy — a literacy question at the population level, not just the individual one.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- NEW SECTION: Knowledge Translation & Capacity Building -->
+        <div class="section-card">
+            <div class="page-title">Beyond Publication</div>
+            <h2 class="section-heading">Knowledge Translation & Capacity Building</h2>
+            <div class="capacity-box">
+                <p style="color: var(--text-dark); font-size: 1rem; margin-bottom: 16px; line-height: 1.8;">
+                    Publishing research answers the "what do people know" question, but it doesn't answer "who gets to do the knowing." That gap is what led me to co-found MedRAN (Medical Research and Academic Network) and establish SheResearch, a structured seven-session research methodology curriculum I designed and delivered online to 26 female medical students — teaching the same research skills I'd had to teach myself, without a formal pathway to learn them. I currently mentor five students through their own research projects.
+                </p>
+                <p style="color: var(--text-dark); font-size: 1rem; margin: 0; line-height: 1.8; font-weight: 500;">
+                    For me, this is the other half of health literacy work: it's not enough to generate evidence about excluded communities. Communities — and the researchers who come from them — need the tools to generate that evidence themselves.
                 </p>
             </div>
         </div>
 
         <footer>
-            © Farah Abou Kheir | Hosted on GitHub Pages
+            <div class="footer-links">
+                <a href="mailto:farah.aboukheir.med@gmail.com" target="_blank">Email</a>
+                <span>•</span>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <span>•</span>
+                <a href="https://orcid.org" target="_blank">ORCID</a>
+            </div>
+            <div>© Farah Abou Kheir | Hosted on GitHub Pages</div>
         </footer>
     </div>
 
 </body>
 </html>
-
