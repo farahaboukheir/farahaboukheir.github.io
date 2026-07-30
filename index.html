@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farah Abou Kheir | Academic & Research Portfolio</title>
+    <title>Farah Abou Kheir | Medical & Public Health Portfolio</title>
     <!-- Google Fonts: Tajawal & Great Vibes -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -84,17 +84,17 @@
 
         .welcome-hero {
             background: var(--hero-gradient);
-            padding: 60px 40px;
+            padding: 50px 40px;
             border-radius: 20px;
             border: 1px solid var(--lavender-border);
             box-shadow: 0 10px 30px rgba(74, 62, 109, 0.04);
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
         .script-welcome {
             font-family: 'Great Vibes', cursive;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             color: var(--accent-lavender);
             margin: 0;
             line-height: 1;
@@ -102,29 +102,68 @@
 
         .welcome-hero h1 {
             color: var(--primary-purple);
-            margin: 15px 0;
-            font-size: 2.6rem;
+            margin: 12px 0 6px 0;
+            font-size: 2.5rem;
             font-weight: 700;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--primary-purple);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            border: 1px solid var(--lavender-border);
         }
 
         .welcome-subtitle {
             color: var(--text-muted);
             font-weight: 500;
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
+            font-size: 1.05rem;
+            max-width: 720px;
+            margin: 0 auto 25px auto;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .pillar-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--lavender-border);
+            text-align: center;
+        }
+
+        .pillar-title {
+            color: var(--primary-purple);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .pillar-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
         }
 
         .hero-nav-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+            gap: 18px;
         }
 
         .btn-card {
             background-color: var(--card-bg);
-            padding: 24px 20px;
+            padding: 22px 20px;
             border-radius: 16px;
             text-decoration: none;
             border: 1px solid var(--lavender-border);
@@ -144,13 +183,13 @@
         .btn-card-title {
             color: var(--primary-purple);
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
         }
 
         .btn-card-desc {
             color: var(--text-muted);
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             text-align: center;
         }
 
@@ -161,7 +200,8 @@
             font-size: 0.88rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .pillars-grid { grid-template-columns: 1fr; }
             .hero-nav-grid { grid-template-columns: 1fr; }
             .nav-container { flex-direction: column; gap: 10px; }
             .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
@@ -185,28 +225,47 @@
 
     <div class="container">
         <header class="welcome-hero">
-            <div class="script-welcome">Welcome to My Academic World</div>
+            <div class="script-welcome">Welcome</div>
             <h1>Farah Abou Kheir</h1>
+            <div class="hero-tag">MD Candidate & Public Health Researcher</div>
+            
             <div class="welcome-subtitle">
-                Medical Student & Public Health Researcher dedicated to evidence-based healthcare, community education, and inclusive health interventions.
+                Dedicated to clinical excellence, evidence-based public health research, and community medical education.
             </div>
 
+            <!-- 3 Pillars highlighting Medical & Research background -->
+            <div class="pillars-grid">
+                <div class="pillar-box">
+                    <div class="pillar-title">Clinical Practice</div>
+                    <p class="pillar-desc">Solid medical foundation & clinical training with strong academic distinction.</p>
+                </div>
+                <div class="pillar-box">
+                    <div class="pillar-title">Public Health & Research</div>
+                    <p class="pillar-desc">Focusing on epidemiology, community health outcomes, and scientific methodology.</p>
+                </div>
+                <div class="pillar-box">
+                    <div class="pillar-title">Medical Leadership</div>
+                    <p class="pillar-desc">Leading student academic networks, workshops, and health awareness campaigns.</p>
+                </div>
+            </div>
+
+            <!-- Main Navigation Links -->
             <div class="hero-nav-grid">
                 <a href="about.html" class="btn-card">
-                    <span class="btn-card-title">My Identity →</span>
-                    <span class="btn-card-desc">Background, medical journey, and academic achievements</span>
+                    <span class="btn-card-title">Medical Journey & Profile →</span>
+                    <span class="btn-card-desc">Academic background, clinical experience, and achievements</span>
                 </a>
                 <a href="research.html" class="btn-card">
-                    <span class="btn-card-title">Scholarly Work →</span>
-                    <span class="btn-card-desc">Peer-reviewed publications and epidemiological studies</span>
+                    <span class="btn-card-title">Scholarly Work & Papers →</span>
+                    <span class="btn-card-desc">Medical publications, studies, and research protocols</span>
                 </a>
                 <a href="initiatives.html" class="btn-card">
-                    <span class="btn-card-title">Initiatives →</span>
-                    <span class="btn-card-desc">MedRAN, SheResearch, and community empowerment</span>
+                    <span class="btn-card-title">Academic Initiatives →</span>
+                    <span class="btn-card-desc">MedRAN, SheResearch, and medical training projects</span>
                 </a>
                 <a href="contact.html" class="btn-card">
                     <span class="btn-card-title">Get in Touch →</span>
-                    <span class="btn-card-desc">Direct inquiries, ResearchGate, ORCID & email</span>
+                    <span class="btn-card-desc">Direct inquiries, Academic profiles & Contact info</span>
                 </a>
             </div>
         </header>
