@@ -28,7 +28,6 @@
             padding: 0;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--lavender-border);
@@ -58,17 +57,18 @@
 
         .nav-links {
             display: flex;
-            gap: 18px;
+            gap: 16px;
             list-style: none;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             white-space: nowrap;
         }
 
@@ -110,7 +110,6 @@
             padding-bottom: 10px;
         }
 
-        /* Impact Project Card Styling */
         .impact-card {
             background: #ffffff;
             border: 1px solid var(--lavender-border);
@@ -173,7 +172,6 @@
             top: -2px;
         }
 
-        /* Sub-initiatives Style (Watad & Naseej) */
         .sub-initiative {
             background: var(--hero-gradient);
             border-left: 3px solid var(--accent-lavender);
@@ -194,7 +192,6 @@
             color: var(--text-muted);
         }
 
-        /* 2x2 Photo Gallery Grid */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -221,7 +218,6 @@
             transform: scale(1.05);
         }
 
-        /* Post Link Buttons */
         .post-links {
             display: flex;
             gap: 12px;
@@ -282,6 +278,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">My Identity</a></li>
                 <li><a href="research.html">Scholarly Work</a></li>
+                <li><a href="medical.html">Medical Education</a></li>
                 <li><a href="community.html" class="active">Community & Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
@@ -304,11 +301,16 @@
             
             <!-- 1. Ro'ya Initiative -->
             <div class="impact-card">
-                <span class="impact-role">Scientific Team Leader</span>
-                <h3 class="impact-title">Ro'ya</h3>
+                <span class="impact-role">Co-Founder & Scientific Team Leader</span>
+                <h3 class="impact-title">Ro'ya Initiative — Pioneer Inclusive First Aid</h3>
                 <p class="impact-desc">
-                    As Scientific Team Leader, I develop health education materials adapted for individuals with visual and hearing impairments — first-aid principles translated into formats that don't assume a learner can see a diagram or hear an instruction. The team has trained over 200 participants. This role taught me that "accessible" isn't a simplified version of standard content; it's a redesign built around a different starting point entirely.
+                    As Scientific Team Leader, I develop health education materials adapted for individuals with visual and hearing impairments — first-aid principles translated into formats that don't assume a learner can see a diagram or hear an instruction. This role taught me that "accessible" isn't a simplified version of standard content; it's a redesign built around a different starting point entirely.
                 </p>
+                <ul class="impact-highlights">
+                    <li>Designed customized, tactile, and sensory-adapted first aid educational kits for participants.</li>
+                    <li>Trained over 200 participants using tailored disability-inclusive pedagogical methodologies.</li>
+                    <li>Promoted health equality and self-reliance in emergency situations among vulnerable populations.</li>
+                </ul>
 
                 <!-- 2x2 Photo Gallery -->
                 <strong style="color: var(--primary-purple); font-size: 0.95rem;">Initiative Gallery:</strong>
@@ -324,17 +326,21 @@
             <div class="impact-card">
                 <span class="impact-role">Community Mobilizer & Project Coordinator</span>
                 <h3 class="impact-title">Caritas Syria — Peacebuilding & Social Cohesion</h3>
+                <p class="impact-desc">
+                    As a community representative with Caritas Syria, my role has been to merge health with community work — not delivering health information from the outside, but building it into spaces people already trust. I coordinate two major community-driven initiatives supported by Swiss funding:
+                </p>
 
                 <div class="sub-initiative">
-                    <h4>Naseej (Caritas Syria)</h4>
-                    <p>I coordinate health education activities within Naseej, a social cohesion initiative bringing together parents, teachers, and children in post-conflict communities. The goal isn't just health knowledge transfer — it's rebuilding the trust and routine that make people receptive to that knowledge in the first place.</p>
+                    <h4>Watad Initiative</h4>
+                    <p>Rehabilitated the Cultural Center into a safe community space for adolescents, establishing four specialized clubs: Health & Wellbeing Club, Environmental Club, Debating Club, and Physics Club. Adolescents are an age group public health strategy often skips past — too old for pediatric programming, too young to be reached through adult channels — and this initiative exists to close that gap.</p>
                 </div>
 
                 <div class="sub-initiative">
-                    <h4>Watad (Caritas Syria)</h4>
-                    <p>Through Watad, I design and supervise adolescent health education programs. Adolescents are an age group public health strategy often skips past — too old for pediatric programming, too young to be reached through adult channels — and this initiative exists to close that gap.</p>
+                    <h4>Naseej Initiative</h4>
+                    <p>Coordinates health education activities that build social cohesion among parents, teachers, and children in post-conflict communities. The goal isn't just health knowledge transfer — it's rebuilding the trust and routine that make people receptive to that knowledge in the first place.</p>
                 </div>
 
+                
                 <!-- 2x2 Photo Gallery -->
                 <div style="margin-top: 20px;">
                     <strong style="color: var(--primary-purple); font-size: 0.95rem;">Caritas Initiative Gallery:</strong>
@@ -355,7 +361,7 @@
                     Organized local workshops and interactive awareness sessions aimed at spreading civic culture, promoting public health literacy, and encouraging active youth leadership across local Syrian communities.
                 </p>
                 
-                <!-- Featured Cultural Center & Outreach Posts Links -->
+<!-- Featured Cultural Center & Outreach Posts Links -->
                 <div style="margin-top: 20px;">
                     <strong style="color: var(--primary-purple); font-size: 0.95rem;">Featured Health Outreach & Coverage Links:</strong>
                     <div class="post-links">
@@ -384,3 +390,4 @@
 
 </body>
 </html>
+
