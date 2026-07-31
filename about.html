@@ -1,399 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Identity | Farah Abou Kheir</title>
-    <!-- Google Fonts: Tajawal & Great Vibes -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-purple: #4a3e6d;
-            --accent-lavender: #8b78a5;
-            --light-bg: #faf9fc;
-            --card-bg: #ffffff;
-            --text-dark: #2d2838;
-            --text-muted: #625975;
-            --lavender-border: #e6e1f0;
-            --badge-bg: #f0ebf7;
-            --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
-        }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--lavender-border);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .nav-logo {
-            font-family: 'Great Vibes', cursive;
-            font-size: 1.5rem;
-            color: var(--primary-purple);
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 18px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.92rem;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary-purple);
-            font-weight: 700;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--lavender-border);
-            box-shadow: 0 10px 30px rgba(74, 62, 109, 0.03);
-            margin-bottom: 30px;
-        }
-
-        .page-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.2rem;
-            color: var(--accent-lavender);
-            margin: 0;
-            line-height: 1;
-        }
-
-        .section-heading {
-            color: var(--primary-purple);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 5px;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--badge-bg);
-            padding-bottom: 10px;
-        }
-
-        .about-text p {
-            color: var(--text-dark);
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            line-height: 1.8;
-        }
-
-        /* Key Figures & Milestones Cards */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .metric-card {
-            background: var(--hero-gradient);
-            border: 1px solid var(--lavender-border);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .metric-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
-        }
-
-        .metric-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary-purple);
-            line-height: 1.2;
-            margin-bottom: 6px;
-        }
-
-        .metric-label {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            font-weight: 500;
-        }
-
-        /* Timeline Styles */
-        .timeline {
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid var(--badge-bg);
-            margin-top: 20px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 25px;
-            padding-left: 15px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -27px;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--accent-lavender);
-            border: 2px solid var(--card-bg);
-        }
-
-        .timeline-title {
-            color: var(--primary-purple);
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .timeline-date {
-            color: var(--accent-lavender);
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .timeline-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* Core Focus Grid */
-        .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .focus-box {
-            background: var(--hero-gradient);
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px solid var(--lavender-border);
-        }
-
-        .focus-title {
-            color: var(--primary-purple);
-            font-weight: 700;
-            font-size: 1rem;
-            margin-bottom: 6px;
-        }
-
-        .focus-desc {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            margin: 0;
-        }
-
-        footer {
-            border-top: 1px solid var(--lavender-border);
-            margin-top: 50px;
-            padding: 30px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: var(--primary-purple);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-lavender);
-        }
-
-        @media (max-width: 600px) {
-            .metrics-grid, .focus-grid { grid-template-columns: 1fr; }
-            .nav-container { flex-direction: column; gap: 10px; }
-            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
-            .footer-links { flex-direction: column; gap: 8px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Identity | Farah Abou Kheir</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">My Identity</a></li>
-                <li><a href="education.html">Medical Education</a></li>
-                <li><a href="research.html">Scholarly Work</a></li>
-                <li><a href="initiatives.html">Community & Impact</a></li>
-                <li><a href="contact.html">Get in Touch</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        
-        <!-- Bio Section -->
-        <div class="section-card">
-            <div class="page-title">Personal Story</div>
-            <h2 class="section-heading">About Me</h2>
-            <div class="about-text">
-                <p>
-                    Health, I learned early, is never just clinical. Growing up in Syria, I watched illness follow the lines of poverty, displacement, and exclusion — and I noticed that the people most affected by a health problem were often the last to have accurate information about it.
-                </p>
-                <p>
-                    That observation has followed me through every project I've taken on since. Whether I'm studying why university students can't put down their phones, adapting first-aid materials for someone who's never seen a diagram, or coordinating a health session for parents and teachers trying to rebuild a sense of normalcy — I keep coming back to the same question: what do people actually know about their health, and what's stopping that knowledge from reaching them?
-                </p>
-                <p>
-                    I'm a medical student at Damascus University, but most of what shaped how I think about medicine happened outside the lecture hall, in research I pursued on my own initiative, in community rooms with Caritas, and in first-aid sessions with participants who taught me more about accessibility than any textbook did. I also spend a good part of my time trying to make sure other students don't have to learn research methodology the hard, self-taught way I did — which is why I built MedRAN.
-                </p>
-                <p>
-                    I'm currently applying to graduate programs in public health and medical education, hoping to turn years of hands-on, self-directed work into the kind of rigorous training that lets me do it at scale.
-                </p>
-            </div>
-        </div>
-
-        <!-- Key Figures & Milestones -->
-        <div class="section-card">
-            <div class="page-title">Impact & Numbers</div>
-            <h2 class="section-heading">Key Figures & Milestones</h2>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-number">91%</div>
-                    <div class="metric-label">Graduation Distinction Average (Damascus University)</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number">200+</div>
-                    <div class="metric-label">Participants Trained in Inclusive Health Education (Ro'ya)</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number">2</div>
-                    <div class="metric-label">Published Papers</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-number">4</div>
-                    <div class="metric-label">Community Initiatives Founder</div>
-                </div>
-                <div class="metric-card" style="grid-column: span 2;">
-                    <div class="metric-number">26</div>
-                    <div class="metric-label">Researchers Trained Through MedRAN / SheResearch</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Academic Milestones & Timeline -->
-        <div class="section-card">
-            <div class="page-title">Journey</div>
-            <h2 class="section-heading">Academic Milestones & Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-title">MedRAN & SheResearch Initiatives</div>
-                    <div class="timeline-date">2023 - Present</div>
-                    <p class="timeline-desc">Founded academic mentorship networks empowering medical students and female researchers in peer-reviewed research and writing.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-title">Caritas Syria — Community Health Education</div>
-                    <div class="timeline-date">2022 - Present</div>
-                    <p class="timeline-desc">Coordinated health literacy and health education sessions for vulnerable, displaced, and underserved communities.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-title">Ro'ya Initiative — Inclusive First-Aid Training</div>
-                    <div class="timeline-date">2022 - 2023</div>
-                    <p class="timeline-desc">Designed adapted, accessible first-aid and community emergency response packages for individuals with sensory impairments.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-title">Epidemiological Research — Smartphone Addiction Study</div>
-                    <div class="timeline-date">2023</div>
-                    <p class="timeline-desc">Led data collection and analysis on cross-sectional behavioral patterns and health outcomes among Syrian university students.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-title">Faculty of Medicine — Damascus University</div>
-                    <div class="timeline-date">2018 - Present</div>
-                    <p class="timeline-desc">Medical student completing clinical clerkships with a consistent high-distinction academic average.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Core Academic & Clinical Focus -->
-        <div class="section-card">
-            <div class="page-title">Expertise</div>
-            <h2 class="section-heading">Core Academic & Clinical Focus</h2>
-            <div class="focus-grid">
-                <div class="focus-box">
-                    <div class="focus-title">Public Health & Epidemiology</div>
-                    <p class="focus-desc">Designing observational health studies and evaluating community health metrics in post-conflict settings.</p>
-                </div>
-                <div class="focus-box">
-                    <div class="focus-title">Evidence-Based Medicine</div>
-                    <p class="focus-desc">Translating clinical guidelines and research methodology into practical student-led learning toolkits.</p>
-                </div>
-                <div class="focus-box">
-                    <div class="focus-title">Inclusive Health Interventions</div>
-                    <p class="focus-desc">Developing accessible health promotion materials for marginalized groups and individuals with disabilities.</p>
-                </div>
-                <div class="focus-box">
-                    <div class="focus-title">Health Literacy & Education</div>
-                    <p class="focus-desc">Fostering clear, empathetic communication to bridge health gaps among vulnerable populations.</p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <div class="footer-links">
-                <a href="mailto:farah.aboukheir.med@gmail.com" target="_blank">Email</a>
-                <span>•</span>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <span>•</span>
-                <a href="https://orcid.org" target="_blank">ORCID</a>
-            </div>
-            <div>© Farah Abou Kheir | Hosted on GitHub Pages</div>
-        </footer>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">My Identity</a>
+        <a href="medical.html" class="nav-link">Medical Education</a>
+        <a href="research.html" class="nav-link">Scholarly Work</a>
+        <a href="community.html" class="nav-link">Community & Impact</a>
+        <a href="contact.html" class="nav-link">Get in Touch</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-tag">Personal Story</span>
+      <h1 class="page-title">About Me</h1>
+    </div>
+  </section>
+
+  <!-- Bio Narrative Section -->
+  <section class="section-padding">
+    <div class="container text-container">
+      <p class="body-lead">
+        I'm Farah, a medical student at Damascus University, though most days I feel more like a researcher who happens to also be finishing medical school.
+      </p>
+      <p>
+        I got into research almost by accident. A single case report during my clinical years turned into a genuine curiosity: not just about diagnosing illness, but about why some people never get the chance to know what's wrong with them in the first place, or what to do about it. That curiosity turned into surveys with over a thousand participants, late nights with SPSS, and a growing list of questions I still don't have full answers to.
+      </p>
+      <p>
+        Outside of research, I spend a lot of my time in rooms that don't look like clinics; community centers, cultural halls, first-aid training spaces, trying to make health information make sense to people who were never given it in a form that fit them. Sometimes that means designing a curriculum for people with visual or hearing impairments. Sometimes it means training five medical students on how to ask a good research question. Sometimes it's just sitting with a group of parents and teachers, talking about how a community holds itself together after everything that's happened here.
+      </p>
+      <p>
+        I'm not someone who separates these things into "research" and "community". They feed each other. The questions I ask in a study usually started as something I noticed in a room full of people first.
+      </p>
+      <p>
+        I'm based in Rural Damascus, Syria, and I'm always happy to connect with people working on health literacy, disability-inclusive education, or anything in between.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Figures & Milestones Grid -->
+  <section class="section-padding bg-alt">
+    <div class="container">
+      <span class="section-tag text-center display-block">Impact & Numbers</span>
+      <h2 class="section-heading text-center">Key Figures & Milestones</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">91%</div>
+          <div class="stat-label">Graduation Distinction Average (Damascus University)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">200+</div>
+          <div class="stat-label">Participants Trained in Inclusive Health Education (Ro'ya)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Published Papers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4</div>
+          <div class="stat-label">Community Initiatives Founder</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">26</div>
+          <div class="stat-label">Researchers Trained Through MedRAN / SheResearch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Milestones & Timeline -->
+  <section class="section-padding">
+    <div class="container text-container">
+      <span class="section-tag">Journey</span>
+      <h2 class="section-heading">Academic Milestones & Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 – Present</span>
+            <h3>MedRAN & SheResearch Initiatives</h3>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 – Present</span>
+            <h3>Caritas Syria — Community Mobilizer</h3>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022 – Present</span>
+            <h3>Ro'ya Team — Inclusive First-Aid Training</h3>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 – Present</span>
+            <h3>Epidemiological Research</h3>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 – Present</span>
+            <h3>Faculty of Medicine — Damascus University</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Academic & Clinical Focus -->
+  <section class="section-padding bg-alt">
+    <div class="container text-container">
+      <span class="section-tag">Expertise</span>
+      <h2 class="section-heading">Core Academic & Clinical Focus</h2>
+      <ul class="focus-list">
+        <li><strong>Public Health & Epidemiology:</strong> Designing observational health studies and evaluating community health metrics in post-conflict settings.</li>
+        <li><strong>Evidence-Based Medicine:</strong> Translating clinical guidelines and research methodology into practical student-led learning toolkits.</li>
+        <li><strong>Inclusive Health Interventions:</strong> Developing accessible health promotion materials for marginalized groups and individuals with disabilities.</li>
+        <li><strong>Health Literacy & Education:</strong> Fostering clear, empathetic communication to bridge health gaps among vulnerable populations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; Farah Abou Kheir | Hosted on GitHub Pages</p>
+      <div class="footer-links">
+        <a href="mailto:farah.aboukheir@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="https://linkedin.com/in/farahaboukheir" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
