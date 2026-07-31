@@ -188,11 +188,42 @@
             display: block;
         }
 
+        .author-role {
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--primary-purple);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
         .research-desc {
             color: var(--text-muted);
             font-size: 0.95rem;
             margin: 0;
             line-height: 1.6;
+        }
+
+        .btn-full-article {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 6px 16px;
+            background-color: var(--badge-bg);
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border-radius: 8px;
+            border: 1px solid var(--lavender-border);
+            transition: all 0.2s ease;
+        }
+
+        .btn-full-article:hover {
+            background-color: var(--primary-purple);
+            color: #ffffff;
+            border-color: var(--primary-purple);
         }
 
         .knowledge-block p {
@@ -239,8 +270,8 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">My Identity</a></li>
-                <li><a href="research.html" class="active">Scholarly Work</a></li>
                 <li><a href="medical.html">Medical Education</a></li>
+                <li><a href="research.html" class="active">Scholarly Work</a></li>
                 <li><a href="community.html">Community & Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
@@ -264,6 +295,18 @@
 
             <div class="research-card">
                 <div class="research-header">
+                    <h3 class="research-title">Smartphone Addiction Screening Status and Associated Physical and Neuropsychological Symptoms Among Syrian University Students: A Cross-Sectional Study</h3>
+                    <span class="status-tag status-published">Published</span>
+                </div>
+                <span class="journal-name">BMC Public Health</span>
+                <div><span class="author-role">First & Corresponding Author</span></div>
+                <p class="research-desc">
+                    Examined how unregulated digital health information shapes behavior among university students. This was my first attempt to measure a health literacy gap directly, rather than just observe one.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-header">
                     <h3 class="research-title">Duct-Related Complications of Pediatric Posttraumatic Pancreatitis: A Case Report from Syria</h3>
                     <span class="status-tag status-published">Published</span>
                 </div>
@@ -272,6 +315,8 @@
                 <p class="research-desc">
                     Lead-author case report from my graduation project, examining a rare pediatric surgical complication.
                 </p>
+
+                <a href="https://www.ovid.com/jnls/ijscr/fulltext/10.1016/j.ijscr.2025.110885~duct-related-complications-of-pediatric-post-traumatic" target="_blank" rel="noopener" class="btn-full-article">Full Article &rarr;</a>
             </div>
 
             <div class="research-card">
@@ -283,19 +328,43 @@
                 <p class="research-desc">
                     Linked conflict-driven educational disruption to mental health outcomes among Syrian women. It was the first time my research explicitly connected structural exclusion to health literacy, a link I've built on ever since.
                 </p>
+
+                <a href="https://link.springer.com/article/10.1186/s12905-025-04096-1" target="_blank" rel="noopener" class="btn-full-article">Full Article &rarr;</a>
             </div>
         </div>
 
-        <!-- Manuscripts Under Review -->
+        <!-- Manuscripts Under Review / Submitted -->
         <div class="section-card">
-            <h2 class="section-heading">Manuscripts Under Review</h2>
+            <h2 class="section-heading">Manuscripts Under Review & Submitted</h2>
+
+            <div class="research-card">
+                <div class="research-header">
+                    <h3 class="research-title">Early Outcomes After Atrial Fibrillation Hospitalisation in Syria and Egypt: A Two-Centre Observational Cohort Study</h3>
+                    <span class="status-tag status-review">Submitted</span>
+                </div>
+                <span class="journal-name">Clinical Cardiology</span>
+                <p class="research-desc">
+                    Observational study examining clinical progression and early outcomes following hospitalisation for atrial fibrillation across two major tertiary centers in the MENA region.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-header">
+                    <h3 class="research-title">The Impact of Armed Conflict on Atrial Fibrillation Outcomes: Evidence from Two Low-to Middle-Income Countries in the Middle East and North Africa</h3>
+                    <span class="status-tag status-review">Submitted</span>
+                </div>
+                <span class="journal-name">Scientific Reports</span>
+                <p class="research-desc">
+                    Examining how conflict-driven health system fragility affects patient management and outcomes in low- and middle-income countries.
+                </p>
+            </div>
 
             <div class="research-card">
                 <div class="research-header">
                     <h3 class="research-title">Knowledge, Attitudes, and Willingness to Perform Cardiopulmonary Resuscitation in Syria</h3>
                     <span class="status-tag status-review">Under Review</span>
                 </div>
-                <span class="journal-name">BMC Cardiovascular Disorders</span>
+                <span class="journal-name">BMC Public Health</span>
                 <p class="research-desc">
                     Identified critical gaps in bystander CPR readiness in Syria (1,050 participants). It confirmed something I'd suspected from community sessions: life-saving knowledge often exists in principle but doesn't reach the people who'll need to use it under pressure.
                 </p>
@@ -327,28 +396,6 @@
         <!-- Ongoing Research -->
         <div class="section-card">
             <h2 class="section-heading">Ongoing Research & Cohort Studies</h2>
-
-            <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">Smartphone Addiction Among University Students</h3>
-                    <span class="status-tag status-ongoing">Ongoing / N=1,024</span>
-                </div>
-                <span class="journal-name">National Cross-Sectional Study</span>
-                <p class="research-desc">
-                    Examined how unregulated digital health information shapes behavior among university students. This was my first attempt to measure a health literacy gap directly, rather than just observe one.
-                </p>
-            </div>
-
-            <div class="research-card">
-                <div class="research-header">
-                    <h3 class="research-title">The Impact of Armed Conflict on Atrial Fibrillation Outcomes: Evidence from Two LMICs</h3>
-                    <span class="status-tag status-ongoing">Ongoing</span>
-                </div>
-                <span class="journal-name">Multicenter Cohort Study</span>
-                <p class="research-desc">
-                    Examining how conflict-driven health system fragility affects patient management and outcomes in low- and middle-income countries.
-                </p>
-            </div>
 
             <div class="research-card">
                 <div class="research-header">
