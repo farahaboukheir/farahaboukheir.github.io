@@ -3,270 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Farah Abou Kheir's medical education — academic record, graduation project, and certifications from Damascus University's Faculty of Medicine.">
     <title>Medical Education | Farah Abou Kheir</title>
-    <!-- Google Fonts: Tajawal & Great Vibes -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-purple: #4a3e6d;
-            --accent-lavender: #8b78a5;
-            --light-bg: #faf9fc;
-            --card-bg: #ffffff;
-            --text-dark: #2d2838;
-            --text-muted: #625975;
-            --lavender-border: #e6e1f0;
-            --badge-bg: #f0ebf7;
-            --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
-        }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--lavender-border);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .nav-logo {
-            font-family: 'Great Vibes', cursive;
-            font-size: 1.5rem;
-            color: var(--primary-purple);
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 16px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary-purple);
-            font-weight: 700;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--lavender-border);
-            box-shadow: 0 10px 30px rgba(74, 62, 109, 0.03);
-            margin-bottom: 30px;
-        }
-
-        .page-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.2rem;
-            color: var(--accent-lavender);
-            margin: 0;
-            line-height: 1;
-        }
-
-        .section-heading {
-            color: var(--primary-purple);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 5px;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--badge-bg);
-            padding-bottom: 10px;
-        }
-
-        .sub-heading {
-            color: var(--primary-purple);
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 28px 0 14px 0;
-        }
-
-        /* Academic performance table */
-        .grades-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .grades-table th {
-            background-color: var(--badge-bg);
-            color: var(--primary-purple);
-            padding: 12px 14px;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .grades-table td {
-            padding: 12px 14px;
-            text-align: center;
-            border-bottom: 1px solid var(--lavender-border);
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .grades-table tr:last-child td {
-            border-bottom: none;
-            font-weight: 700;
-            color: var(--primary-purple);
-            background-color: var(--hero-gradient);
-        }
-
-        .grades-table td:first-child {
-            text-align: left;
-            font-weight: 600;
-        }
-
-        /* Info card for graduation project / RBCs */
-        .info-card {
-            background: var(--hero-gradient);
-            border: 1px solid var(--lavender-border);
-            border-radius: 14px;
-            padding: 24px;
-            margin-bottom: 18px;
-        }
-
-        .info-card h4 {
-            margin: 0 0 8px 0;
-            color: var(--primary-purple);
-            font-size: 1.1rem;
-        }
-
-        .info-card p {
-            margin: 4px 0;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 10px;
-        }
-
-        .cert-category h4 {
-            color: var(--primary-purple);
-            font-size: 1rem;
-            margin-bottom: 12px;
-            border-bottom: 2px solid var(--badge-bg);
-            padding-bottom: 8px;
-        }
-
-        .cert-category ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .cert-category li {
-            position: relative;
-            padding-left: 20px;
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .cert-category li::before {
-            content: "•";
-            color: var(--accent-lavender);
-            font-weight: bold;
-            position: absolute;
-            left: 4px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        @media (max-width: 600px) {
-            .grades-table {
-                font-size: 0.82rem;
-            }
-            .grades-table th, .grades-table td {
-                padding: 8px 6px;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
+            <a href="index.html" class="nav-logo">Farah Abou Kheir<span class="dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">My Identity</a></li>
-                <li><a href="research.html">Scholarly Work</a></li>
                 <li><a href="medical.html" class="active">Medical Education</a></li>
-                <li><a href="community.html">Community & Impact</a></li>
+                <li><a href="research.html">Scholarly Work</a></li>
+                <li><a href="community.html">Community &amp; Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
+    <main id="main" class="container">
 
-        <!-- Header -->
         <div class="section-card">
-            <div class="page-title">Medical Education</div>
-            <h2 class="section-heading">Academic Record</h2>
-            <p style="color: var(--text-muted); margin: 0 0 20px 0; font-size: 1.05rem;">
+            <div class="eyebrow">Damascus University · Faculty of Medicine</div>
+            <h1 class="page-title">Medical Education</h1>
+            <p class="page-subtitle">
                 Six years at Damascus University's Faculty of Medicine, building both the clinical foundation and the research instincts that shaped everything else on this site.
             </p>
+        </div>
 
+        <div class="section-card">
+            <h2 class="section-heading">Academic Record</h2>
             <table class="grades-table">
                 <thead>
                     <tr>
@@ -277,106 +46,74 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>First Year</td>
-                        <td>87.8</td>
-                        <td>91</td>
-                        <td>89.4</td>
-                    </tr>
-                    <tr>
-                        <td>Second Year</td>
-                        <td>88.71</td>
-                        <td>89.5</td>
-                        <td>89.11</td>
-                    </tr>
-                    <tr>
-                        <td>Third Year</td>
-                        <td>92</td>
-                        <td>89.86</td>
-                        <td>90.93</td>
-                    </tr>
-                    <tr>
-                        <td>Fourth Year</td>
-                        <td>91.86</td>
-                        <td>93.29</td>
-                        <td>92.57</td>
-                    </tr>
-                    <tr>
-                        <td>Fifth Year</td>
-                        <td>91.43</td>
-                        <td>93.56</td>
-                        <td>92.49</td>
-                    </tr>
-                    <tr>
-                        <td>Sixth Year</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>Cumulative</td>
-                        <td></td>
-                        <td></td>
-                        <td>91% (Distinction)</td>
-                    </tr>
+                    <tr><td>First Year</td><td>87.8</td><td>91</td><td>89.4</td></tr>
+                    <tr><td>Second Year</td><td>88.71</td><td>89.5</td><td>89.11</td></tr>
+                    <tr><td>Third Year</td><td>92</td><td>89.86</td><td>90.93</td></tr>
+                    <tr><td>Fourth Year</td><td>91.86</td><td>93.29</td><td>92.57</td></tr>
+                    <tr><td>Fifth Year</td><td>91.43</td><td>93.56</td><td>92.49</td></tr>
+                    <tr><td>Sixth Year</td><td>—</td><td>—</td><td>—</td></tr>
+                    <tr><td>Cumulative</td><td></td><td></td><td>91% (Distinction)</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- Graduation Project -->
         <div class="section-card">
             <h2 class="section-heading">Graduation Project</h2>
             <div class="info-card">
                 <h4>Grade: 100/100</h4>
                 <p>Supervisor: Dr. Jaber Mahmoud</p>
-                <p>Related published work: "Duct-related complications of pediatric posttraumatic pancreatitis: A case report from Syria" — Kheir FA, Moustafa L, Ahmad L, Kamil H, Mahmod J, Sandouk F. Int J Surg Case Rep. 2025 Feb;127:110885.</p>
+                <p>Related published work: &ldquo;Duct-related complications of pediatric posttraumatic pancreatitis: A case report from Syria&rdquo; — Kheir FA, Moustafa L, Ahmad L, Kamil H, Mahmod J, Sandouk F. Int J Surg Case Rep. 2025 Feb;127:110885.</p>
             </div>
         </div>
 
-        <!-- RBCs Team -->
         <div class="section-card">
-            <h2 class="section-heading">Extracurricular Leadership — RBCs Team</h2>
+            <h2 class="section-heading">Extracurricular Leadership <span class="record-tag">RBCs Team</span></h2>
             <div class="info-card">
-                <h4>Medical Content Transcriber & Team Lead — RBCs Team (Mar 2023 – Sep 2025)</h4>
+                <h4>Medical Content Transcriber &amp; Team Lead — RBCs Team (Mar 2023 – Sep 2025)</h4>
                 <p>RBCs is a volunteer academic team of medical students producing free educational content and running health awareness campaigns for the community, under the philosophy that knowledge — like red blood cells — should keep moving and reaching every part of the body that needs it.</p>
                 <p>I managed a team of 74 volunteers over one year, coordinating workflow and quality through weekly meetings, and separately led a 12-member subgroup responsible for the pediatrics course content. In 2024, I was ranked the team's top-performing volunteer across all projects and campaigns.</p>
             </div>
         </div>
 
-        <!-- Certifications -->
         <div class="section-card">
-            <h2 class="section-heading">Certifications & Training</h2>
+            <h2 class="section-heading">Certifications &amp; Training</h2>
             <div class="cert-grid">
                 <div class="cert-category">
-                    <h4>Research Methodology & Data Science</h4>
+                    <h4>Research Methodology &amp; Data Science</h4>
                     <ul>
-                        <li>Cochrane Interactive Learning — Systematic Reviews & Meta-Analysis (2025)</li>
+                        <li>Cochrane Interactive Learning — Systematic Reviews &amp; Meta-Analysis (2025)</li>
                         <li>Train the Trainer in Scientific Research — 8-week program, Antimythotic Team (2024)</li>
                         <li>Summary Statistics in Public Health — Johns Hopkins University, Coursera (2023)</li>
                         <li>Understanding Medical Research — Yale University, Coursera (2023)</li>
                     </ul>
                 </div>
                 <div class="cert-category">
-                    <h4>Medical Education & Leadership</h4>
+                    <h4>Medical Education &amp; Leadership</h4>
                     <ul>
                         <li>Teach the Teacher: Foundations of Clinical Education — The Clinicians' RoadMap (2026)</li>
-                        <li>Social Cohesion Training — 20-hour certified training, Caritas & Emessa Academy (2025)</li>
+                        <li>Social Cohesion Training — 20-hour certified training, Caritas &amp; Emessa Academy (2025)</li>
                     </ul>
                 </div>
                 <div class="cert-category">
-                    <h4>Clinical Skills & Community Health</h4>
+                    <h4>Clinical Skills &amp; Community Health</h4>
                     <ul>
                         <li>Psychological First Aid — Johns Hopkins University, Coursera (2023)</li>
-                        <li>Basic & Advanced Cardiac Life Support (BLS/ACLS) — NHCPS (2022)</li>
+                        <li>Basic &amp; Advanced Cardiac Life Support (BLS/ACLS) — NHCPS (2022)</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <footer>
-            © Farah Abou Kheir | Hosted on GitHub Pages
-        </footer>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:farahak2002@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/farah-abou-kheir" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://orcid.org/0009-0006-2637-1370" target="_blank" rel="noopener">ORCID</a>
+        </div>
+        <div>&copy; Farah Abou Kheir · Hosted on GitHub Pages</div>
+    </footer>
 
 </body>
 </html>
