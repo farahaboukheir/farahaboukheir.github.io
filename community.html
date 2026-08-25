@@ -3,307 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community & Impact | Farah Abou Kheir</title>
-    <!-- Google Fonts: Tajawal & Great Vibes -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-purple: #4a3e6d;
-            --accent-lavender: #8b78a5;
-            --light-bg: #faf9fc;
-            --card-bg: #ffffff;
-            --text-dark: #2d2838;
-            --text-muted: #625975;
-            --lavender-border: #e6e1f0;
-            --badge-bg: #f0ebf7;
-            --hero-gradient: linear-gradient(135deg, #f3edf9 0%, #faf9fc 100%);
-        }
-
-        body {
-            font-family: 'Tajawal', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--lavender-border);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .nav-logo {
-            font-family: 'Great Vibes', cursive;
-            font-size: 1.5rem;
-            color: var(--primary-purple);
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 16px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary-purple);
-            font-weight: 700;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--lavender-border);
-            box-shadow: 0 10px 30px rgba(74, 62, 109, 0.03);
-            margin-bottom: 30px;
-        }
-
-        .page-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3.2rem;
-            color: var(--accent-lavender);
-            margin: 0;
-            line-height: 1;
-        }
-
-        .section-heading {
-            color: var(--primary-purple);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 5px;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--badge-bg);
-            padding-bottom: 10px;
-        }
-
-        .impact-card {
-            background: #ffffff;
-            border: 1px solid var(--lavender-border);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .impact-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(74, 62, 109, 0.06);
-            border-color: var(--accent-lavender);
-        }
-
-        .impact-role {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--accent-lavender);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .impact-title {
-            color: var(--primary-purple);
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0 0 12px 0;
-        }
-
-        .impact-desc {
-            color: var(--text-dark);
-            font-size: 1.02rem;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .impact-highlights {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0 0 20px 0;
-        }
-
-        .impact-highlights li {
-            position: relative;
-            padding-left: 22px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-        }
-
-        .impact-highlights li::before {
-            content: "•";
-            color: var(--accent-lavender);
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: absolute;
-            left: 5px;
-            top: -2px;
-        }
-
-        .sub-initiative {
-            background: var(--hero-gradient);
-            border-left: 3px solid var(--accent-lavender);
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-
-        .sub-initiative h4 {
-            margin: 0 0 5px 0;
-            color: var(--primary-purple);
-            font-size: 1.05rem;
-        }
-
-        .sub-initiative p {
-            margin: 0;
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--lavender-border);
-            background-color: var(--badge-bg);
-            aspect-ratio: 4/3;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .post-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 18px;
-        }
-
-        .post-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background-color: var(--badge-bg);
-            color: var(--primary-purple);
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            border: 1px solid var(--lavender-border);
-            transition: all 0.2s ease;
-        }
-
-        .post-btn:hover {
-            background-color: var(--primary-purple);
-            color: #ffffff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        @media (max-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+    <meta name="description" content="Farah Abou Kheir's community work — Ro'ya inclusive first aid, Caritas Syria peacebuilding initiatives, and community health education.">
+    <title>Community &amp; Impact | Farah Abou Kheir</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Farah Abou Kheir</a>
+            <a href="index.html" class="nav-logo">Farah Abou Kheir<span class="dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">My Identity</a></li>
-                <li><a href="research.html">Scholarly Work</a></li>
                 <li><a href="medical.html">Medical Education</a></li>
-                <li><a href="community.html" class="active">Community & Impact</a></li>
+                <li><a href="research.html">Scholarly Work</a></li>
+                <li><a href="community.html" class="active">Community &amp; Impact</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
-        
-        <!-- Header Card -->
+    <main id="main" class="container">
+
         <div class="section-card">
-            <div class="page-title">Community & Impact</div>
-            <h2 class="section-heading">Inclusive Health, Peacebuilding & Social Impact</h2>
-            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">
+            <div class="eyebrow">Inclusive Health · Peacebuilding · Social Impact</div>
+            <h1 class="page-title">Community &amp; Impact</h1>
+            <p class="page-subtitle">
                 Bridging medical knowledge with grassroots community empowerment, peacebuilding, and inclusive health education across Syrian communities.
             </p>
         </div>
 
-        <!-- Initiatives Showcase -->
         <div class="section-card">
-            
+
             <!-- 1. Ro'ya Team -->
-            <div class="impact-card">
-                <span class="impact-role">First-Aid Trainer & Scientific Team Leader</span>
+            <div class="item-card" style="border-left-color: var(--teal); padding: 28px 30px 30px;">
+                <span class="impact-role">First-Aid Trainer &amp; Scientific Team Leader</span>
                 <h3 class="impact-title">Ro'ya Team</h3>
                 <p class="impact-desc">
                     The first team in the Levant to teach first aid to people with visual and hearing impairments. Training our first cohort reshaped how I think about accessibility — not a simplified version of standard content, but a redesign built around touch, sound, and a different starting point entirely.
@@ -314,8 +49,7 @@
                     <li>Promoted health equality and self-reliance in emergency situations among vulnerable populations.</li>
                 </ul>
 
-                <!-- 2x2 Photo Gallery -->
-                <strong style="color: var(--primary-purple); font-size: 0.95rem;">Initiative Gallery:</strong>
+                <span class="gallery-label">Initiative Gallery</span>
                 <div class="gallery-grid">
                     <div class="gallery-item"><img src="roya1.jpg" alt="Ro'ya Training Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+1'"></div>
                     <div class="gallery-item"><img src="roya2.jpg" alt="Ro'ya Training Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Ro%27ya+2'"></div>
@@ -325,16 +59,16 @@
             </div>
 
             <!-- 2. Caritas Syria -->
-            <div class="impact-card">
-                <span class="impact-role">Community Mobilizer & Project Coordinator</span>
-                <h3 class="impact-title">Caritas Syria — Peacebuilding & Social Cohesion</h3>
+            <div class="item-card" style="border-left-color: var(--teal); padding: 28px 30px 30px; margin-top: 26px;">
+                <span class="impact-role">Community Mobilizer &amp; Project Coordinator</span>
+                <h3 class="impact-title">Caritas Syria — Peacebuilding &amp; Social Cohesion</h3>
                 <p class="impact-desc">
                     As a Community Mobilizer with Caritas Syria, I work in a space that was never originally about health — it's about rebuilding trust between people after conflict. I introduced health as a shared language within that work: something neutral enough to bring different groups into the same room, and useful enough to keep them there. I facilitated dialogue sessions aimed at strengthening cohesion among communities in the aftermath of Syria's recent conflict, and I currently lead two of these community-driven initiatives, supported by Swiss funding:
                 </p>
 
                 <div class="sub-initiative">
                     <h4>Watad Initiative</h4>
-                    <p>Rehabilitated the Cultural Center into a safe community space for adolescents, establishing four specialized clubs: Health & Wellbeing Club, Environmental Club, Debating Club, and Physics Club. Adolescents are an age group public health strategy often skips past — too old for pediatric programming, too young to be reached through adult channels — and this initiative exists to close that gap.</p>
+                    <p>Rehabilitated the Cultural Center into a safe community space for adolescents, establishing four specialized clubs: Health &amp; Wellbeing Club, Environmental Club, Debating Club, and Physics Club. Adolescents are an age group public health strategy often skips past — too old for pediatric programming, too young to be reached through adult channels — and this initiative exists to close that gap.</p>
                 </div>
 
                 <div class="sub-initiative">
@@ -342,56 +76,51 @@
                     <p>Coordinates health education activities that build social cohesion among parents, teachers, and children in post-conflict communities. The goal isn't just health knowledge transfer — it's rebuilding the trust and routine that make people receptive to that knowledge in the first place.</p>
                 </div>
 
-                <!-- 2x2 Photo Gallery -->
-                <div style="margin-top: 20px;">
-                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Caritas Initiative Gallery:</strong>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="caritas1.jpg" alt="Caritas Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+1'"></div>
-                        <div class="gallery-item"><img src="caritas2.jpg" alt="Caritas Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+2'"></div>
-                        <div class="gallery-item"><img src="caritas3.jpg" alt="Caritas Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+3'"></div>
-                        <div class="gallery-item"><img src="caritas4.jpg" alt="Caritas Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+4'"></div>
-                    </div>
+                <span class="gallery-label">Caritas Initiative Gallery</span>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="caritas1.jpg" alt="Caritas Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+1'"></div>
+                    <div class="gallery-item"><img src="caritas2.jpg" alt="Caritas Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+2'"></div>
+                    <div class="gallery-item"><img src="caritas3.jpg" alt="Caritas Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+3'"></div>
+                    <div class="gallery-item"><img src="caritas4.jpg" alt="Caritas Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Caritas+4'"></div>
                 </div>
             </div>
 
-            <!-- 3. Community Educator -->
-            <div class="impact-card">
+            <!-- 3. Towards a Better Future -->
+            <div class="item-card" style="border-left-color: var(--teal); padding: 28px 30px 30px; margin-top: 26px;">
                 <span class="impact-role">Community Educator</span>
                 <h3 class="impact-title">Towards a Better Future</h3>
                 <p class="impact-desc">
                     In partnership with the Rural Damascus Directorate of Culture, I organized community workshops and awareness sessions marking international health days — spaces where local residents came together to celebrate the day, learn key health messages, and engage with ideas relevant to their communities.
                 </p>
 
-                <!-- Featured Health Outreach & Coverage Links -->
-                <div style="margin-top: 20px;">
-                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Featured Health Outreach & Coverage Links:</strong>
-                    <div class="post-links">
-                        <a href="https://www.facebook.com/61563469413375/posts/122180484224448980/?app=fbl" target="_blank" class="post-btn">📌 Diabetes Awareness Session Post</a>
-                        <a href="https://www.facebook.com/100064574476372/posts/1378117444350725/?app=fbl" target="_blank" class="post-btn">📌 Community Health Workshop Post</a>
-                        <a href="https://dcrn-sy.com/?p=10209" target="_blank" class="post-btn">🌐 DCRN Network Article Coverage</a>
-                    </div>
+                <span class="gallery-label">Featured Health Outreach &amp; Coverage</span>
+                <div class="post-links">
+                    <a href="https://www.facebook.com/61563469413375/posts/122180484224448980/?app=fbl" target="_blank" rel="noopener" class="post-btn">Diabetes Awareness Session →</a>
+                    <a href="https://www.facebook.com/100064574476372/posts/1378117444350725/?app=fbl" target="_blank" rel="noopener" class="post-btn">Community Health Workshop →</a>
+                    <a href="https://dcrn-sy.com/?p=10209" target="_blank" rel="noopener" class="post-btn">DCRN Network Coverage →</a>
                 </div>
 
-                <!-- 2x2 Photo Gallery -->
-                <div style="margin-top: 20px;">
-                    <strong style="color: var(--primary-purple); font-size: 0.95rem;">Workshops Gallery:</strong>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="future1.jpg" alt="Future Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Future+1'"></div>
-                        <div class="gallery-item"><img src="future2.jpg" alt="Future Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Future+2'"></div>
-                        <div class="gallery-item"><img src="future3.jpg" alt="Future Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Future+3'"></div>
-                        <div class="gallery-item"><img src="future4.jpg" alt="Future Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Future+4'"></div>
-                    </div>
+                <span class="gallery-label">Workshops Gallery</span>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="future1.jpg" alt="Future Session 1" onerror="this.src='https://via.placeholder.com/400x300?text=Future+1'"></div>
+                    <div class="gallery-item"><img src="future2.jpg" alt="Future Session 2" onerror="this.src='https://via.placeholder.com/400x300?text=Future+2'"></div>
+                    <div class="gallery-item"><img src="future3.jpg" alt="Future Session 3" onerror="this.src='https://via.placeholder.com/400x300?text=Future+3'"></div>
+                    <div class="gallery-item"><img src="future4.jpg" alt="Future Session 4" onerror="this.src='https://via.placeholder.com/400x300?text=Future+4'"></div>
                 </div>
             </div>
 
         </div>
 
-        <footer>
-            © Farah Abou Kheir | Hosted on GitHub Pages
-        </footer>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:farahak2002@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/farah-abou-kheir" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://orcid.org/0009-0006-2637-1370" target="_blank" rel="noopener">ORCID</a>
+        </div>
+        <div>&copy; Farah Abou Kheir · Hosted on GitHub Pages</div>
+    </footer>
 
 </body>
 </html>
-
-
