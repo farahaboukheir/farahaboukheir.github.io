@@ -1,78 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Farah Abou Kheir — medical student and public health researcher based in Rural Damascus, Syria.">
-    <title>Get in Touch | Farah Abou Kheir</title>
+    <meta name="description" content="About Farah Abou Kheir — medical student and public health researcher based in Rural Damascus, Syria, working on health literacy and inclusive health education.">
+    <title>My Identity | Farah Abou Kheir</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 0;
-        }
-        .contact-side {
-            padding: 44px;
-            border-right: 1px solid var(--line);
-        }
-        .contact-main { padding: 44px; }
-        .channel-row {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            margin-top: 24px;
-        }
-        .channel-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding: 16px 0;
-            border-top: 1px solid var(--line);
-        }
-        .channel-item:last-child { border-bottom: 1px solid var(--line); }
-        .channel-label {
-            font-family: var(--mono);
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--muted);
-        }
-        .channel-value {
-            font-family: var(--mono);
-            font-size: 0.88rem;
-            color: var(--teal-deep);
-            text-decoration: none;
-            text-align: right;
-        }
-        .channel-value:hover { text-decoration: underline; }
-        .best-for-list {
-            list-style: none;
-            padding: 0;
-            margin: 18px 0 0 0;
-        }
-        .best-for-list li {
-            position: relative;
-            padding-left: 18px;
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        .best-for-list li::before {
-            content: "—";
-            color: var(--teal);
-            position: absolute;
-            left: 0;
-        }
-        .honeypot { position: absolute; left: -9999px; }
-        @media (max-width: 780px) {
-            .contact-layout { grid-template-columns: 1fr; }
-            .contact-side { border-right: none; border-bottom: 1px solid var(--line); }
-        }
-    </style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -82,11 +16,11 @@
             <a href="index.html" class="nav-logo">Farah Abou Kheir<span class="dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">My Identity</a></li>
+                <li><a href="about.html" class="active">My Identity</a></li>
                 <li><a href="medical.html">Medical Education</a></li>
                 <li><a href="research.html">Scholarly Work</a></li>
                 <li><a href="community.html">Community &amp; Impact</a></li>
-                <li><a href="contact.html" class="active">Get in Touch</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
@@ -94,86 +28,118 @@
     <main id="main" class="container">
 
         <div class="section-card">
-            <div class="eyebrow">Open to Collaboration</div>
-            <h1 class="page-title">Get in Touch</h1>
+            <div class="eyebrow">Rural Damascus, Syria</div>
+            <h1 class="page-title">My Identity</h1>
             <p class="page-subtitle">
-                I'm always glad to hear from people working on health literacy, disability-inclusive education, or public health research in conflict-affected settings — whether that's a collaboration, a question about my work, or an academic inquiry.
+                The story behind the CV — how a single case report turned into a research practice, and why community rooms matter as much as clinics.
             </p>
         </div>
 
-        <div class="section-card" style="padding: 0; overflow: hidden;">
-            <div class="contact-layout">
+        <!-- Bio -->
+        <div class="section-card">
+            <h2 class="section-heading">About Me</h2>
+            <div class="item-desc" style="font-size: 1.02rem;">
+                <p style="margin-bottom: 20px;">
+                    I'm Farah, a medical student at Damascus University, though most days I feel more like a researcher who happens to also be finishing medical school.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    I got into research almost by accident. A single case report during my clinical years turned into a genuine curiosity: not just about diagnosing illness, but about why some people never get the chance to know what's wrong with them in the first place, or what to do about it. That curiosity turned into surveys with over a thousand participants, late nights with SPSS, and a growing list of questions I still don't have full answers to.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Outside of research, I spend a lot of my time in rooms that don't look like clinics — community centers, cultural halls, first-aid training spaces — trying to make health information make sense to people who were never given it in a form that fit them. Sometimes that means designing a curriculum for people with visual or hearing impairments. Sometimes it means training five medical students on how to ask a good research question. Sometimes it's just sitting with a group of parents and teachers, talking about how a community holds itself together after everything that's happened here.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    I'm not someone who separates these things into &ldquo;research&rdquo; and &ldquo;community.&rdquo; They feed each other. The questions I ask in a study usually started as something I noticed in a room full of people first.
+                </p>
+                <p style="margin-bottom: 0;">
+                    I'm based in Rural Damascus, Syria, and I'm always happy to connect with people working on health literacy, disability-inclusive education, or anything in between.
+                </p>
+            </div>
+        </div>
 
-                <!-- Left: context + direct channels -->
-                <div class="contact-side">
-                    <div class="eyebrow">Best reached about</div>
-                    <ul class="best-for-list">
-                        <li>Research collaboration or co-authorship</li>
-                        <li>Disability-inclusive health education</li>
-                        <li>MedRAN / SheResearch mentorship inquiries</li>
-                        <li>Speaking or workshop invitations</li>
-                    </ul>
-
-                    <div class="channel-row">
-                        <div class="channel-item">
-                            <span class="channel-label">Email</span>
-                            <a class="channel-value" href="mailto:farahak2002@gmail.com">farahak2002@gmail.com</a>
-                        </div>
-                        <div class="channel-item">
-                            <span class="channel-label">ResearchGate</span>
-                            <a class="channel-value" href="https://www.researchgate.net/profile/Farah-Abou-Kheir" target="_blank" rel="noopener">Profile →</a>
-                        </div>
-                        <div class="channel-item">
-                            <span class="channel-label">ORCID</span>
-                            <a class="channel-value" href="https://orcid.org/0009-0006-2637-1370" target="_blank" rel="noopener">0009-0006-2637-1370</a>
-                        </div>
-                        <div class="channel-item">
-                            <span class="channel-label">Based in</span>
-                            <span class="channel-value" style="color: var(--muted);">Rural Damascus, Syria</span>
-                        </div>
+        <!-- How I Work: replaces the old Key Figures block (kept only on the homepage to avoid repeating the same numbers twice) -->
+        <div class="section-card">
+            <h2 class="section-heading">How I Work</h2>
+            <div class="timeline" style="border-left: none; padding-left: 0;">
+                <div class="timeline-item" style="padding-left: 0; margin-bottom: 26px;">
+                    <div class="eyebrow" style="margin-bottom: 8px;">01</div>
+                    <div class="timeline-content">
+                        <h3>The question usually starts in the room, not the literature.</h3>
+                        <p>Most of what I end up studying began as something I noticed while training, teaching, or sitting with a community — not something I read first.</p>
                     </div>
                 </div>
-
-                <!-- Right: working contact form -->
-                <div class="contact-main">
-                    <div class="eyebrow">Send a message</div>
-
-                    <!--
-                      Wired to Formspree. To activate:
-                      1. Create a free account at https://formspree.io using farahak2002@gmail.com
-                      2. Create a new form — Formspree gives you an endpoint like https://formspree.io/f/abcdwxyz
-                      3. Replace YOUR_FORM_ID below with that ID
-                      Formspree will then email every submission straight to your inbox — no backend needed.
-                    -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
-                        <input type="hidden" name="_subject" value="New message from farahaboukheir.github.io">
-
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email Address</label>
-                            <input type="email" id="email" name="_replyto" class="form-control" placeholder="Enter your email address" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Research Inquiry / Collaboration / General" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                        <p class="form-note">Messages are sent directly to my inbox — I typically reply within a few days.</p>
-                    </form>
+                <div class="timeline-item" style="padding-left: 0; margin-bottom: 26px;">
+                    <div class="eyebrow" style="margin-bottom: 8px;">02</div>
+                    <div class="timeline-content">
+                        <h3>Access means redesigning, not simplifying.</h3>
+                        <p>Adapting health education for people with disabilities isn't a lighter version of the standard material — it's a different starting point built around touch, sound, and trust.</p>
+                    </div>
                 </div>
+                <div class="timeline-item" style="padding-left: 0; margin-bottom: 0;">
+                    <div class="eyebrow" style="margin-bottom: 8px;">03</div>
+                    <div class="timeline-content">
+                        <h3>Research and community work feed each other.</h3>
+                        <p>I don't treat them as separate tracks. The trust I build in a community room is usually what makes the research possible in the first place.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Timeline -->
+        <div class="section-card">
+            <h2 class="section-heading">Academic Milestones &amp; Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 — Present</div>
+                    <div class="timeline-content"><h3>MedRAN &amp; SheResearch Initiatives</h3></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 — Present</div>
+                    <div class="timeline-content"><h3>Caritas Syria — Community Mobilizer</h3></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 — Present</div>
+                    <div class="timeline-content"><h3>Ro'ya Team — Inclusive First-Aid Training</h3></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 — Present</div>
+                    <div class="timeline-content"><h3>Epidemiological Research</h3></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 — Present</div>
+                    <div class="timeline-content">
+                        <h3>Faculty of Medicine — Damascus University</h3>
+                        <p>Graduation 99% complete</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Focus areas -->
+        <div class="section-card">
+            <h2 class="section-heading">Core Academic &amp; Clinical Focus</h2>
+            <div class="cert-grid">
+                <div class="cert-category">
+                    <h4>Public Health &amp; Epidemiology</h4>
+                    <p class="impact-desc" style="font-size: 0.92rem; margin: 0;">Designing observational health studies and evaluating community health metrics in post-conflict settings.</p>
+                </div>
+                <div class="cert-category">
+                    <h4>Evidence-Based Medicine</h4>
+                    <p class="impact-desc" style="font-size: 0.92rem; margin: 0;">Translating clinical guidelines and research methodology into practical student-led learning toolkits.</p>
+                </div>
+                <div class="cert-category">
+                    <h4>Inclusive Health Interventions</h4>
+                    <p class="impact-desc" style="font-size: 0.92rem; margin: 0;">Developing accessible health promotion materials for marginalized groups and individuals with disabilities.</p>
+                </div>
+                <div class="cert-category">
+                    <h4>Health Literacy &amp; Education</h4>
+                    <p class="impact-desc" style="font-size: 0.92rem; margin: 0;">Fostering clear, empathetic communication to bridge health gaps among vulnerable populations.</p>
+                </div>
             </div>
         </div>
 
